@@ -1,0 +1,13 @@
+{
+  "name": "com.securevault.nativehost",
+  "description": "SecureVault Password Manager Native Host",
+  "path": "E:\\ShareME\\SBAC TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\native_host\\native_host.bat",
+  "type": "stdio",
+  "allowed_origins": [
+  "chrome-extension://cldkhbahjgejehiibgablcphhkmoccbp/",
+  "chrome-extension://cldkhbahjgejehiibgablcphhkmoccbp/"
+]
+}
+
+
+

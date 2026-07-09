@@ -1,0 +1,36 @@
+securevault/
+│
+├── main.py                          ← entry point
+├── requirements.txt
+├── README.md
+│
+├── crypto/vault_crypto.py           ← AES-256-GCM, Argon2id, generator
+├── auth/windows_auth.py             ← DPAPI encrypt/decrypt, SID
+├── auth/session.py                  ← in-memory vault key
+├── db/database.py                   ← all SQLite CRUD
+│
+├── ui/styles.py                     ← Catppuccin dark theme
+├── ui/login_dialog.py               ← unlock + register
+├── ui/main_window.py                ← vault browser + tray + 📥 Import button  ← UPDATED
+├── ui/entry_dialog.py               ← add/edit entry
+├── ui/password_generator.py         ← generator dialog
+├── ui/import_dialog.py              ← tabbed import wizard  ← NEW
+│
+├── importers/__init__.py            ← NEW
+├── importers/base.py                ← ImportedCredential dataclass  ← NEW
+├── importers/chrome_importer.py     ← Chrome DPAPI+AES decrypt  ← NEW
+├── importers/edge_importer.py       ← Edge (inherits Chrome)  ← NEW
+├── importers/firefox_importer.py    ← Firefox CSV + auto-decrypt  ← NEW
+├── importers/csv_importer.py        ← any generic CSV  ← NEW
+│
+├── autofill/desktop_fill.py         ← Ctrl+Shift+F hotkey
+│
+├── native_host/native_host.py       ← ping/get/check/save/update  ← UPDATED
+├── native_host/install_host.py      ← registry installer
+│
+└── browser_extension/
+    ├── manifest.json
+    ├── background.js                ← routes save/update messages  ← UPDATED
+    ├── content.js                   ← autofill button + save/update banner  ← UPDATED
+    ├── popup.html
+    └── popup.js

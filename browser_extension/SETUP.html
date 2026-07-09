@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>SecureVault Extension Setup</title>
+<style>
+  body { font-family: 'Segoe UI', sans-serif; max-width: 780px; margin: 40px auto;
+         background: #1e1e2e; color: #cdd6f4; line-height: 1.6; padding: 0 20px; }
+  h1   { color: #89b4fa; font-size: 26px; border-bottom: 2px solid #313244; padding-bottom: 10px; }
+  h2   { color: #89b4fa; font-size: 18px; margin-top: 32px; }
+  .step { background: #313244; border-radius: 10px; padding: 16px 20px;
+          margin: 14px 0; border-left: 4px solid #89b4fa; }
+  .step .num { background: #89b4fa; color: #1e1e2e; font-weight: 700;
+               border-radius: 50%; width: 26px; height: 26px; display: inline-flex;
+               align-items: center; justify-content: center; margin-right: 10px; font-size: 14px; }
+  code { background: #181825; color: #a6e3a1; padding: 3px 8px;
+         border-radius: 4px; font-family: Consolas, monospace; font-size: 13px; }
+  .warn { background: #2a1f1f; border-left: 4px solid #f38ba8;
+          border-radius: 8px; padding: 12px 16px; margin: 12px 0; color: #f38ba8; }
+  .ok   { background: #1a2a1a; border-left: 4px solid #a6e3a1;
+          border-radius: 8px; padding: 12px 16px; margin: 12px 0; color: #a6e3a1; }
+  img-placeholder { display: block; background: #252536; border-radius: 8px;
+                    padding: 20px; text-align: center; color: #585b70; margin: 10px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+  th { background: #313244; padding: 10px; text-align: left; color: #89b4fa; }
+  td { padding: 9px 10px; border-bottom: 1px solid #313244; }
+  tr:nth-child(even) td { background: #252536; }
+</style>
+</head>
+<body>
+
+<h1>🔐 SecureVault — Browser Extension Setup</h1>
+
+<div class="ok">
+  <strong>What this does:</strong> Detects login forms on any website, lets you autofill
+  saved passwords, and prompts you to Save or Update credentials when you submit a login form —
+  just like 1Password or Bitwarden.
+</div>
+
+<h2>Prerequisites</h2>
+<ul>
+  <li>SecureVault app running with your vault <strong>linked to your Windows account</strong>
+      (⚙ Link Windows Acct in the toolbar)</li>
+  <li>Google Chrome or Microsoft Edge installed</li>
+  <li>Python virtual environment activated</li>
+</ul>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2>Step 1 — Register the Native Messaging Host</h2>
+
+<div class="step">
+  <span class="num">1</span>
+  Open PowerShell inside your <code>securevault</code> folder
+</div>
+<div class="step">
+  <span class="num">2</span>
+  Activate the virtual environment:
+  <br><br><code>.venv\Scripts\activate</code>
+</div>
+<div class="step">
+  <span class="num">3</span>
+  Run the installer:
+  <br><br><code>python native_host\install_host.py</code>
+  <br><br>
+  This creates registry keys for both Chrome and Edge, and generates
+  <code>native_host\com.securevault.nativehost.json</code>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2>Step 2 — Load the Extension in Chrome</h2>
+
+<div class="step">
+  <span class="num">1</span>
+  Open Chrome and go to: <code>chrome://extensions</code>
+</div>
+<div class="step">
+  <span class="num">2</span>
+  Enable <strong>Developer mode</strong> — toggle in the top-right corner
+</div>
+<div class="step">
+  <span class="num">3</span>
+  Click <strong>Load unpacked</strong>
+</div>
+<div class="step">
+  <span class="num">4</span>
+  Navigate to your securevault folder and select the
+  <code>browser_extension</code> subfolder → click <strong>Select Folder</strong>
+</div>
+<div class="step">
+  <span class="num">5</span>
+  The SecureVault card appears. <strong>Copy the Extension ID</strong>
+  (32-character string, e.g. <code>abcdefghijklmnopabcdefghijklmnop</code>)
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2>Step 2b — Load in Microsoft Edge (same steps, different URL)</h2>
+
+<div class="step">
+  Go to <code>edge://extensions</code> → enable Developer mode →
+  Load unpacked → select <code>browser_extension</code> folder
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2>Step 3 — Authorise the Extension</h2>
+
+<div class="step">
+  <span class="num">1</span>
+  Open this file in Notepad:
+  <br><br><code>native_host\com.securevault.nativehost.json</code>
+</div>
+<div class="step">
+  <span class="num">2</span>
+  Replace <code>YOUR_EXTENSION_ID_HERE</code> with the ID you copied:
+  <br><br>
+  <code>"allowed_origins": [ "chrome-extension://YOUR_EXTENSION_ID_HERE/" ]</code>
+  <br><br>
+  If using both Chrome and Edge, add both IDs:
+  <br><br>
+  <code>"allowed_origins": [<br>
+  &nbsp;&nbsp;"chrome-extension://CHROME_ID/",<br>
+  &nbsp;&nbsp;"chrome-extension://EDGE_ID/"<br>
+  ]</code>
+</div>
+<div class="step">
+  <span class="num">3</span>
+  Save the file, go back to <code>chrome://extensions</code>,
+  and click the <strong>↺ reload</strong> icon on the SecureVault card
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2>Step 4 — Test It</h2>
+
+<div class="step">
+  <span class="num">1</span>
+  Make sure the <strong>SecureVault app is running</strong> and your vault is unlocked
+  (it can be minimised to tray)
+</div>
+<div class="step">
+  <span class="num">2</span>
+  Navigate to any login page, e.g. <code>https://github.com/login</code>
+</div>
+<div class="step">
+  <span class="num">3</span>
+  A floating <strong>🔐 SecureVault</strong> button should appear at the bottom-right
+</div>
+<div class="step">
+  <span class="num">4</span>
+  Click it — if you have github.com saved, it fills the form automatically.
+  If you have multiple entries for that domain, a picker appears.
+</div>
+<div class="step">
+  <span class="num">5</span>
+  Click the <strong>🔐 toolbar icon</strong> to open the popup — it lists all
+  credentials for the current domain with individual Fill buttons.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2>How the Save / Update Prompt Works</h2>
+
+<table>
+  <tr><th>Scenario</th><th>What appears</th><th>Action</th></tr>
+  <tr><td>You submit a login form with credentials NOT in the vault</td>
+      <td>Blue banner at top: "Save password to SecureVault?"</td>
+      <td>Click Save → stored instantly</td></tr>
+  <tr><td>You submit a login form with credentials that ARE in the vault but password changed</td>
+      <td>Blue banner: "Update saved password?"</td>
+      <td>Click Update → old password replaced</td></tr>
+  <tr><td>Credentials match exactly what's stored</td>
+      <td>No prompt (nothing to do)</td>
+      <td>—</td></tr>
+  <tr><td>Vault is not linked to Windows account</td>
+      <td>No prompt (DPAPI auth fails silently)</td>
+      <td>Open app → ⚙ Link Windows Acct</td></tr>
+</table>
+
+<div class="warn">
+  ⚠ The save/update prompt requires your vault to be linked to your Windows account
+  (DPAPI). If you created the vault with master password only, click
+  <strong>⚙ Link Windows Acct</strong> in the app toolbar first.
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<h2>Troubleshooting</h2>
+
+<table>
+  <tr><th>Problem</th><th>Fix</th></tr>
+  <tr><td>🔐 button doesn't appear</td>
+      <td>The page has no &lt;input type="password"&gt;. Try the toolbar popup instead.</td></tr>
+  <tr><td>Popup shows "SecureVault app not running"</td>
+      <td>Launch <code>python main.py</code> — the app must be running (can be in tray)</td></tr>
+  <tr><td>Popup shows "No vault linked to Windows account"</td>
+      <td>Open app → ⚙ Link Windows Acct</td></tr>
+  <tr><td>Extension loads but fill does nothing</td>
+      <td>Check extension ID is correct in the .json manifest, reload extension</td></tr>
+  <tr><td>Edge: extension not found</td>
+      <td>Go to <code>edge://extensions</code> and load unpacked separately</td></tr>
+</table>
+
+<hr style="border-color:#313244; margin-top:40px">
+<p style="color:#585b70; font-size:12px; text-align:center">
+  SecureVault v1.0 — Hossain Abedy Supta — July 2026
+</p>
+</body>
+</html>

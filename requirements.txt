@@ -1,0 +1,7 @@
+PyQt6>=6.5.0
+cryptography>=41.0.0
+argon2-cffi>=23.1.0
+pywin32>=306
+pyperclip>=1.8.2
+keyboard>=0.13.5
+psutil>=5.9.0
