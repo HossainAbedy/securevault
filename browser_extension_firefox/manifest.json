@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "name": "SecureVault",
+  "version": "1.0.0",
+  "description": "SecureVault — autofill passwords from your local encrypted vault.",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "securevault@abedy",
+      "strict_min_version": "109.0"
+    }
+  },
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "nativeMessaging",
+    "tabs",
+    "<all_urls>"
+  ],
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "SecureVault"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ]
+}
