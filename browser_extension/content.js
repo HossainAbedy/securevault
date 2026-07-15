@@ -5,7 +5,7 @@
 
   const DOMAIN      = location.hostname.replace(/^www\./, "");
   const SESSION_KEY = "sv_pending_cred";
-  const LOG         = (...a) => console.log("[SecureVault]", ...a);
+  const LOG = () => {};
 
   LOG("content script loaded on", location.href);
 

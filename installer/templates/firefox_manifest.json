@@ -1,0 +1,9 @@
+{
+    "name": "com.securevault.nativehost",
+    "description": "SecureVault Native Host",
+    "path": "__HOST_PATH__",
+    "type": "stdio",
+    "allowed_extensions": [
+        "securevault@abedy"
+    ]
+}

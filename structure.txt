@@ -1,36 +1,80 @@
 securevault/
 │
-├── main.py                          ← entry point
+├── main.py
 ├── requirements.txt
 ├── README.md
 │
-├── crypto/vault_crypto.py           ← AES-256-GCM, Argon2id, generator
-├── auth/windows_auth.py             ← DPAPI encrypt/decrypt, SID
-├── auth/session.py                  ← in-memory vault key
-├── db/database.py                   ← all SQLite CRUD
+├── crypto/
+│   ├── __init__.py
+│   └── vault_crypto.py
 │
-├── ui/styles.py                     ← Catppuccin dark theme
-├── ui/login_dialog.py               ← unlock + register
-├── ui/main_window.py                ← vault browser + tray + 📥 Import button  ← UPDATED
-├── ui/entry_dialog.py               ← add/edit entry
-├── ui/password_generator.py         ← generator dialog
-├── ui/import_dialog.py              ← tabbed import wizard  ← NEW
+├── auth/
+│   ├── __init__.py
+│   ├── windows_auth.py
+│   └── session.py
 │
-├── importers/__init__.py            ← NEW
-├── importers/base.py                ← ImportedCredential dataclass  ← NEW
-├── importers/chrome_importer.py     ← Chrome DPAPI+AES decrypt  ← NEW
-├── importers/edge_importer.py       ← Edge (inherits Chrome)  ← NEW
-├── importers/firefox_importer.py    ← Firefox CSV + auto-decrypt  ← NEW
-├── importers/csv_importer.py        ← any generic CSV  ← NEW
+├── db/
+│   ├── __init__.py
+│   └── database.py
 │
-├── autofill/desktop_fill.py         ← Ctrl+Shift+F hotkey
+├── ui/
+│   ├── __init__.py
+│   ├── styles.py
+│   ├── login_dialog.py
+│   ├── main_window.py
+│   ├── entry_dialog.py
+│   ├── password_generator.py
+│   └── import_dialog.py
 │
-├── native_host/native_host.py       ← ping/get/check/save/update  ← UPDATED
-├── native_host/install_host.py      ← registry installer
+├── importers/
+│   ├── __init__.py
+│   ├── base.py
+│   ├── chrome_importer.py
+│   ├── edge_importer.py
+│   ├── firefox_importer.py
+│   └── csv_importer.py
 │
-└── browser_extension/
-    ├── manifest.json
-    ├── background.js                ← routes save/update messages  ← UPDATED
-    ├── content.js                   ← autofill button + save/update banner  ← UPDATED
-    ├── popup.html
-    └── popup.js
+├── autofill/
+│   ├── __init__.py
+│   └── desktop_fill.py
+│
+├── native_host/
+│   ├── __init__.py
+│   ├── native_host.py
+│   └── install_host.py
+│
+├── browser_extension/              ← Chrome + Edge (MV3)
+│   ├── manifest.json
+│   ├── background.js
+│   ├── content.js
+│   ├── popup.html
+│   ├── popup.js
+│   └── SETUP.html
+│
+├── browser_extension_firefox/      ← Firefox (MV2)
+│   ├── manifest.json
+│   ├── background.js
+│   ├── content.js
+│   ├── popup.html
+│   └── popup.js
+│
+└── installer/
+    ├── build.bat                   ← 5-step build pipeline
+    ├── build_manifests.py          ← generates native host manifests
+    ├── build_xpi.py                ← packages Firefox .xpi
+    ├── securevault.spec            ← PyInstaller main app
+    ├── native_host.spec            ← PyInstaller native host
+    ├── setup.iss                   ← Inno Setup script
+    │
+    ├── assets/                     ← installer resources
+    │   ├── logo.ico                ← ⚠ placeholder, needs real icon
+    │   ├── banner.bmp              ← ⚠ placeholder, needs real banner
+    │   └── setup.html              ← post-install Chrome setup guide
+    │
+    ├── templates/                  ← ⚠ unused, can be removed
+    │   ├── chrome_manifest.json
+    │   └── firefox_manifest.json
+    │
+    ├── dist/                       ← build output (gitignore this)
+    ├── build/                      ← PyInstaller temp (gitignore this)
+    └── output/                     ← final SecureVaultSetup.exe

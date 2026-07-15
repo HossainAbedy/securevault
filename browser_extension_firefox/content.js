@@ -121,6 +121,8 @@
   function showPicker(creds,{userField,pwField}) {
     removeEl("sv-picker");
     const box=document.createElement("div"); box.id="sv-picker";
+
+    // eslint-disable-next-line no-unsanitized/property
     box.innerHTML=`<div class="sv-head">Choose credential</div>`+
       creds.map(c=>`<button class="sv-item" data-u="${esc(c.username)}" data-p="${esc(c.password)}">
         <strong>${esc(c.title)}</strong><small>${esc(c.username)}</small></button>`).join("")+
@@ -137,6 +139,8 @@
     removeEl("sv-banner");
     const isSave=mode==="save";
     const bar=document.createElement("div"); bar.id="sv-banner";
+
+    // eslint-disable-next-line no-unsanitized/property
     bar.innerHTML=`
       <span style="font-size:18px">🔐</span>
       <div style="flex:1">

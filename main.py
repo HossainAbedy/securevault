@@ -10,8 +10,9 @@ Launch order
 4. Run Qt event loop.
 """
 
-import sys
-
+import sys, os
+from PyQt6.QtGui import QIcon
+    
 if sys.platform != "win32":
     sys.exit("SecureVault requires Windows 10 / 11.")
 
@@ -57,6 +58,13 @@ def main():
     )
 
     app = QApplication(sys.argv)
+    
+    if hasattr(sys, "_MEIPASS"):
+        _ico = os.path.join(sys._MEIPASS, "securevault.ico")
+    else:
+        _ico = os.path.join(os.path.dirname(os.path.abspath(__file__)), "securevault.ico")
+    app.setWindowIcon(QIcon(_ico))
+
     app.setApplicationName("SecureVault")
     app.setOrganizationName("AbedySec")
     app.setQuitOnLastWindowClosed(False)   # keep alive in tray

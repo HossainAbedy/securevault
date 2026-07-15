@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "SecureVault",
+  "version": "1.0.0",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAzQiquYgZaGNgWOZO47OwsTIXRuh1lGa6GbTDLaUgSE2qbb0IXXvY26rmEuDKTH6Qc5QNMGaD7mTTXs7LFqfNF5kF/HrSFtxT++pDgqTPVTYUSqPvBT75xOwrQnlvajqrbqlyQOjIrz7SN01jvBq/hsBp+Qt3EVqJkPSjeDNuVmVTuLIgLErHb4lxDvmBY8BwnHj4Ny50z8A2/9/eUlsZ2jIamvH4GeZ8bLEjtHLfDxTiBC65YAmx8f9kUNCTUiOI2aQGegLw0oLg2w/UCCQWqzECJjhtRJ4+ei5C219Tn1SPd8CbvLei1xVS/hfsftw8WriuFzRMK/1MnpFSaeu25QIDAQAB",
+  "description": "SecureVault — autofill passwords from your local encrypted vault.",
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "nativeMessaging",
+    "scripting",
+    "tabs"
+  ],
+  
+  "host_permissions": ["<all_urls>"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SecureVault",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+
+}

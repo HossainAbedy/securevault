@@ -1,0 +1,10 @@
+{
+    "name": "com.securevault.nativehost",
+    "description": "SecureVault Native Messaging Host",
+    "path": "C:\\Program Files\\SecureVault\\native_host\\native_host.exe",
+    "type": "stdio",
+    "allowed_origins": [
+        "chrome-extension://iehpbeonbgfhciidfllbdfjiphooechb/",
+        "chrome-extension://iehpbeonbgfhciidfllbdfjiphooechb/"
+    ]
+}

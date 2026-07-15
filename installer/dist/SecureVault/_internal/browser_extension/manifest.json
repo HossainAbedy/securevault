@@ -1,0 +1,46 @@
+{
+  "manifest_version": 3,
+  "name": "SecureVault",
+  "version": "1.0.0",
+  "description": "SecureVault — autofill passwords from your local encrypted vault.",
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "nativeMessaging",
+    "scripting",
+    "tabs"
+  ],
+  
+  "host_permissions": ["<all_urls>"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SecureVault",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+
+}

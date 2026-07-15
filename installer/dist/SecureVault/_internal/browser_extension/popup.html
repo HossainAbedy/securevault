@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureVault</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 320px;
+      min-height: 180px;
+      background: #1e1e2e;
+      color: #cdd6f4;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 13px;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 14px;
+      background: #181825;
+      border-bottom: 1px solid #313244;
+    }
+    .header h1 { font-size: 15px; color: #89b4fa; font-weight: 700; }
+    .header .lock-ico { font-size: 18px; }
+
+    /* ── Status ──────────────────────────────────────────────────────── */
+    .status {
+      padding: 8px 14px;
+      font-size: 12px;
+      color: #a6adc8;
+      border-bottom: 1px solid #313244;
+      min-height: 34px;
+      display: flex;
+      align-items: center;
+    }
+    .status.error { color: #f38ba8; }
+    .status.ok    { color: #a6e3a1; }
+
+    /* ── Credential list ──────────────────────────────────────────────── */
+    ul.cred-list { list-style: none; }
+    .cred-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 14px;
+      border-bottom: 1px solid #313244;
+      gap: 8px;
+    }
+    .cred-item:last-child { border-bottom: none; }
+    .cred-info { flex: 1; overflow: hidden; }
+    .cred-title {
+      font-weight: 600;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .cred-user {
+      font-size: 11px;
+      color: #a6adc8;
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .fill-btn {
+      flex-shrink: 0;
+      background: #89b4fa;
+      color: #1e1e2e;
+      border: none;
+      border-radius: 5px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .fill-btn:hover { background: #b4befe; }
+
+    /* ── Empty state ─────────────────────────────────────────────────── */
+    .empty {
+      padding: 20px 14px;
+      text-align: center;
+      color: #a6adc8;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+
+    /* ── Footer ──────────────────────────────────────────────────────── */
+    .footer {
+      padding: 8px 14px;
+      border-top: 1px solid #313244;
+      background: #181825;
+      text-align: center;
+    }
+    .footer span {
+      font-size: 11px;
+      color: #585b70;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <span class="lock-ico">🔐</span>
+    <h1>SecureVault</h1>
+  </div>
+
+  <div class="status" id="status">Connecting…</div>
+
+  <ul class="cred-list" id="cred-list"></ul>
+
+  <div class="footer">
+    <span>Ctrl+Shift+F — desktop autofill</span>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

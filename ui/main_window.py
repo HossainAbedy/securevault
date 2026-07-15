@@ -181,32 +181,38 @@ class MainWindow(QMainWindow):
     # ── Tray ─────────────────────────────────────────────────────────────────
 
     def _build_tray(self):
-        self._tray = QSystemTrayIcon(self)
+        import sys
+        import os
+
+        # Resolve icon path (works in development and PyInstaller)
+        if hasattr(sys, "_MEIPASS"):
+            icon_path = os.path.join(sys._MEIPASS, "securevault.ico")
+        else:
+            icon_path = os.path.join(
+                os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                "securevault.ico"
+            )
+
+        icon = QIcon(icon_path)
+
+        self._tray = QSystemTrayIcon(icon, self)
         self._tray.setToolTip("SecureVault")
-        # Generate a simple icon programmatically (no external image file needed)
-        from PyQt6.QtGui import QPixmap, QPainter, QColor, QBrush, QPen
-        pix = QPixmap(32, 32)
-        pix.fill(QColor(0, 0, 0, 0))          # transparent background
-        painter = QPainter(pix)
-        painter.setRenderHint(QPainter.RenderHint.Antialiasing)
-        painter.setBrush(QBrush(QColor("#89b4fa")))
-        painter.setPen(QPen(QColor("#1e1e2e"), 2))
-        painter.drawRoundedRect(2, 2, 28, 28, 6, 6)
-        painter.setPen(QPen(QColor("#1e1e2e"), 3))
-        painter.drawText(pix.rect(), Qt.AlignmentFlag.AlignCenter, "🔐")
-        painter.end()
-        self._tray.setIcon(QIcon(pix))
 
         menu = QMenu()
+
         menu.addAction("Show Vault").triggered.connect(self._show_window)
         menu.addAction("Lock Vault").triggered.connect(self._lock)
         menu.addSeparator()
         menu.addAction("Quit").triggered.connect(self._quit)
+
         self._tray.setContextMenu(menu)
+
         self._tray.activated.connect(
-            lambda r: self._show_window()
-            if r == QSystemTrayIcon.ActivationReason.DoubleClick else None
+            lambda reason: self._show_window()
+            if reason == QSystemTrayIcon.ActivationReason.DoubleClick
+            else None
         )
+
         self._tray.show()
 
     def _show_window(self):
