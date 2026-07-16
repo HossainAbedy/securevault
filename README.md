@@ -3,6 +3,8 @@
 Personal encrypted password manager for Windows 11.  
 Built with Python · PyQt6 · SQLite · AES-256-GCM · Argon2id · Windows DPAPI.
 
+This project uses [SignPath Foundation](https://signpath.org) for code signing.
+
 ---
 
 ## Feature overview
