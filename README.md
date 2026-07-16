@@ -1,29 +1,35 @@
-# 🔐 SecureVault
+🔐 SecureVault
 
-Personal encrypted password manager for Windows 11.  
-Built with Python · PyQt6 · SQLite · AES-256-GCM · Argon2id · Windows DPAPI.
+Offline password manager for Windows with military-grade encryption, desktop autofill, browser integration, and Windows DPAPI auto-unlock.
 
-This project uses [SignPath Foundation](https://signpath.org) for code signing.
+Built with Python • PyQt6 • SQLite • AES-256-GCM • Argon2id • Windows DPAPI
+
+SecureVault is designed to keep your passwords local. Your vault never leaves your computer.
+
+---
+## Feature
+
+| Feature                    | Description                                                                           |
+| -------------------------- | ------------------------------------------------------------------------------------- |
+| 🔒 AES-256-GCM Encryption  | Every credential is individually encrypted before being written to SQLite.            |
+| 🔑 Argon2id                | Memory-hard password hashing for master password protection.                          |
+| 🪟 Windows DPAPI           | Optional passwordless auto-unlock tied to your Windows account.                       |
+| 🌐 Browser Integration     | Chrome, Microsoft Edge and Mozilla Firefox support using Native Messaging.            |
+| ⚡ Desktop Autofill         | Press **Ctrl+Shift+F** to autofill credentials into desktop applications or browsers. |
+| 🔄 Save & Update Detection | Detects login forms and offers to save or update passwords.                           |
+| 🔐 Password Generator      | Strong password generator with configurable options and strength meter.               |
+| 📋 Clipboard Protection    | Automatically clears copied passwords after 30 seconds.                               |
+| 🖥 System Tray             | Runs quietly in the background with quick access.                                     |
+| 🗂 Categories              | Banking, Email, Social, Shopping, Work, General and more.                             |
+
 
 ---
 
-## Feature overview
-
-| Feature | Details |
-|---|---|
-| **Encryption** | AES-256-GCM per entry; vault key never written to disk in plaintext |
-| **Key derivation** | Argon2id (64 MB, 3 passes, 4 lanes) |
-| **Windows auto-unlock** | Vault key wrapped with DPAPI → no password prompt for the owner account |
-| **Other users** | Master password → Argon2id → decrypt vault key |
-| **Desktop autofill** | `Ctrl+Shift+F` global hotkey → picker dialog → keyboard injection |
-| **Browser autofill** | Chrome/Edge extension + native messaging host (DPAPI auto-auth) |
-| **System tray** | Runs minimised; double-click icon to reopen |
-| **Password generator** | Configurable length 8-64, character classes, strength meter |
-| **Categories** | General, Banking, Social, Email, Work, Shopping, Other |
-| **Clipboard safety** | Password auto-clears from clipboard after 30 seconds |
-| **DB location** | `%USERPROFILE%\.securevault\vault.db` |
-
----
+## Browser Support
+Browser	Status
+✅ Google Chrome	Extension available (Chrome Web Store review in progress)
+✅ Microsoft Edge	Uses the Chrome-compatible extension
+✅ Mozilla Firefox	Signed Mozilla Add-on
 
 ## Requirements
 
@@ -33,7 +39,20 @@ This project uses [SignPath Foundation](https://signpath.org) for code signing.
 ---
 
 ## Installation
+Download the latest installer from the Releases page.
 
+The installer automatically:
+
+Installs SecureVault
+Registers Native Messaging Hosts
+Configures Chrome support
+Configures Microsoft Edge support
+Configures Mozilla Firefox support
+Creates optional Desktop and Startup shortcuts
+
+After installation, simply install the browser extension (Chrome/Edge) or restart Firefox if the signed extension has been deployed via enterprise policy.
+
+or for development: 
 ```powershell
 # 1. Clone / extract the project
 cd securevault
@@ -57,39 +76,22 @@ python main.py
 
 ## Browser extension setup
 
-### Step 1 — Register the native messaging host
+### Chrome & Microsoft Edge
 
-```powershell
-python native_host\install_host.py
-```
+1. Install SecureVault.
+2. Open `chrome://extensions` or `edge://extensions`.
+3. Enable **Developer Mode**.
+4. Click **Load unpacked**.
+5. Select:
+6. The extension is ready to use.
 
-This creates a `.bat` launcher and writes registry keys for both Chrome and Edge.  
-Re-run with `--uninstall` to remove.
+### Mozilla Firefox
 
-### Step 2 — Load the extension (unpacked)
+The installer automatically configures Firefox Native Messaging.
 
-1. Open `chrome://extensions` (or `edge://extensions`).
-2. Enable **Developer mode**.
-3. Click **Load unpacked** → select the `browser_extension/` folder.
-4. Copy the Extension ID shown on the card.
+If the signed extension is installed through the enterprise policy, simply restart Firefox.
 
-### Step 3 — Authorise the extension
-
-Open `native_host\com.securevault.nativehost.json` and add your extension ID:
-
-```json
-{
-  "allowed_origins": [
-    "chrome-extension://YOUR_EXTENSION_ID_HERE/"
-  ]
-}
-```
-
-Save the file. Reload the extension. Done.
-
-> The browser extension uses **Windows DPAPI auto-auth** — the vault must be  
-> linked to your Windows account (done during registration, or via  
-> ⚙ **Link Windows Acct** in the toolbar).
+Otherwise install the signed SecureVault extension from Mozilla Add-ons.
 
 ---
 
@@ -108,44 +110,117 @@ presents a picker.  After you select a credential it types username → Tab → 
 
 ```
 securevault/
-├── main.py                      # Entry point
+│
+├── main.py
 ├── requirements.txt
+├── README.md
 │
 ├── crypto/
-│   └── vault_crypto.py          # AES-256-GCM · Argon2id · password generator
+│   ├── __init__.py
+│   └── vault_crypto.py
 │
 ├── auth/
-│   ├── windows_auth.py          # DPAPI encrypt/decrypt, get SID/username
-│   └── session.py               # In-memory session (vault key lives here only)
+│   ├── __init__.py
+│   ├── windows_auth.py
+│   └── session.py
 │
 ├── db/
-│   └── database.py              # SQLite schema + CRUD
+│   ├── __init__.py
+│   └── database.py
 │
 ├── ui/
-│   ├── styles.py                # Catppuccin Mocha QSS theme
-│   ├── login_dialog.py          # Unlock + register pages
-│   ├── main_window.py           # Vault browser, tray, hotkey wiring
-│   ├── entry_dialog.py          # Add / edit entry
-│   └── password_generator.py   # Generator dialog
+│   ├── __init__.py
+│   ├── styles.py
+│   ├── login_dialog.py
+│   ├── main_window.py
+│   ├── entry_dialog.py
+│   ├── password_generator.py
+│   └── import_dialog.py
+│
+├── importers/
+│   ├── __init__.py
+│   ├── base.py
+│   ├── chrome_importer.py
+│   ├── edge_importer.py
+│   ├── firefox_importer.py
+│   └── csv_importer.py
 │
 ├── autofill/
-│   └── desktop_fill.py          # Hotkey registration + keystroke injection
+│   ├── __init__.py
+│   └── desktop_fill.py
 │
 ├── native_host/
-│   ├── native_host.py           # Standalone Chrome/Edge messaging host
-│   └── install_host.py          # One-time registry installer
+│   ├── __init__.py
+│   ├── native_host.py
+│   └── install_host.py
 │
-└── browser_extension/
-    ├── manifest.json            # MV3
-    ├── background.js            # Service worker (bridges popup ↔ native host)
-    ├── content.js               # Login-form detection + autofill button/picker
-    ├── popup.html               # Extension popup UI
-    └── popup.js                 # Popup logic
+├── browser_extension/              ← Chrome + Edge (MV3)
+│   ├── manifest.json
+│   ├── background.js
+│   ├── content.js
+│   ├── popup.html
+│   ├── popup.js
+│   └── SETUP.html
+│
+├── browser_extension_firefox/      ← Firefox (MV2)
+│   ├── manifest.json
+│   ├── background.js
+│   ├── content.js
+│   ├── popup.html
+│   └── popup.js
+│
+└── installer/
+    ├── build.bat                   ← 5-step build pipeline
+    ├── build_manifests.py          ← generates native host manifests
+    ├── build_xpi.py                ← packages Firefox .xpi
+    ├── securevault.spec            ← PyInstaller main app
+    ├── native_host.spec            ← PyInstaller native host
+    ├── setup.iss                   ← Inno Setup script
+    │
+    ├── assets/                     ← installer resources
+    │   ├── logo.ico                
+    │   ├── banner.bmp              
+    │   └── setup.html              ← post-install Chrome setup guide
+    │
+    ├── templates/                  
+    │   ├── chrome_manifest.json
+    │   └── firefox_manifest.json
+    │
+    ├── dist/                       ← build output (gitignore this)
+    ├── build/                      ← PyInstaller temp (gitignore this)
+    └── output/                     ← final SecureVaultSetup.exe
 ```
 
 ---
 
+## Browser Integration
+
+  SecureVault communicates with browsers using the official Native Messaging API.
+  
+  Supported features include:
+  
+  Autofill credentials
+  Save new passwords
+  Update changed passwords
+  Browser password import
+  Domain matching
+
+No browser data is transmitted over the Internet.
+
 ## Security notes
+
+SecureVault follows a local-first security model.
+
+  AES-256-GCM encryption
+  Argon2id key derivation
+  Windows DPAPI integration
+  Offline operation
+  No cloud synchronization
+  No telemetry
+  No analytics
+  No advertising
+  
+  Sensitive data is encrypted before storage. Only encrypted values are written to SQLite.
 
 - The SQLite database is **not** file-encrypted; all sensitive columns are  
   encrypted at the application layer with AES-256-GCM before writing.  
@@ -160,7 +235,15 @@ securevault/
   zero the in-memory key.
 
 ---
+## Downloads
+GitHub Releases (coming soon)
+Chrome Web Store (pending review)
+Mozilla Add-ons (approved)
+
+## Code Signing
+
+SecureVault is digitally signed using the SignPath Foundation code-signing service.
 
 ## Licence
 
-MIT — personal use.
+Copyright © Hossain Abedy. All rights reserved. 
