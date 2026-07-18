@@ -246,4 +246,5 @@ SecureVault is digitally signed using the SignPath Foundation code-signing servi
 
 ## Licence
 
-Copyright © Hossain Abedy. All rights reserved. 
+Copyright © 2026 Hossain Abedy Supta. All rights reserved.
+MIT Licence — see LICENSE file.
