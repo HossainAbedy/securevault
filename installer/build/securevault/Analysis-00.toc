@@ -868,17 +868,17 @@
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\win32\\lib\\win32con.py',
    'PYMODULE'),
-  ('stringprep',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\stringprep.py',
-   'PYMODULE'),
-  ('_colorize',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_colorize.py',
-   'PYMODULE'),
   ('tracemalloc',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\tracemalloc.py',
    'PYMODULE'),
   ('_py_abc',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_py_abc.py',
+   'PYMODULE'),
+  ('_colorize',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_colorize.py',
+   'PYMODULE'),
+  ('stringprep',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\stringprep.py',
    'PYMODULE'),
   ('ui.login_dialog',
    'E:\\ShareME\\SBAC '
@@ -919,29 +919,33 @@
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\styles\\qmodernwindowsstyle.dll',
    'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
    'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+  ('PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
    'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
+  ('PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qicns.dll',
    'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtga.dll',
    'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\iconengines\\qsvgicon.dll',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwebp.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\imageformats\\qpdf.dll',
    'E:\\ShareME\\SBAC '
@@ -951,33 +955,29 @@
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qsvg.dll',
    'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qminimal.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qgif.dll',
-   'BINARY'),
   ('PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qwbmp.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qico.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qoffscreen.dll',
    'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\generic\\qtuiotouchplugin.dll',
+   'BINARY'),
   ('PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qtiff.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\platforms\\qwindows.dll',
+   'BINARY'),
+  ('PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\plugins\\imageformats\\qjpeg.dll',
    'BINARY'),
   ('_decimal.pyd',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\DLLs\\_decimal.pyd',
@@ -1078,6 +1078,10 @@
   ('VCRUNTIME140_1.dll',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\VCRUNTIME140_1.dll',
    'BINARY'),
+  ('PyQt6\\Qt6\\bin\\Qt6Gui.dll',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Gui.dll',
+   'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Widgets.dll',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Widgets.dll',
@@ -1085,10 +1089,6 @@
   ('PyQt6\\Qt6\\bin\\MSVCP140.dll',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\MSVCP140.dll',
-   'BINARY'),
-  ('PyQt6\\Qt6\\bin\\Qt6Gui.dll',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\bin\\Qt6Gui.dll',
    'BINARY'),
   ('PyQt6\\Qt6\\bin\\Qt6Core.dll',
    'E:\\ShareME\\SBAC '
@@ -1224,21 +1224,17 @@
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\securevault.ico',
    'DATA'),
+  ('cryptography-49.0.0.dist-info\\sboms\\sbom.json',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\sboms\\sbom.json',
+   'DATA'),
+  ('cryptography-49.0.0.dist-info\\licenses\\LICENSE.BSD',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\licenses\\LICENSE.BSD',
+   'DATA'),
   ('cryptography-49.0.0.dist-info\\INSTALLER',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\INSTALLER',
-   'DATA'),
-  ('cryptography-49.0.0.dist-info\\RECORD',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\RECORD',
-   'DATA'),
-  ('cryptography-49.0.0.dist-info\\WHEEL',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\WHEEL',
-   'DATA'),
-  ('cryptography-49.0.0.dist-info\\licenses\\LICENSE',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\licenses\\LICENSE',
    'DATA'),
   ('cryptography-49.0.0.dist-info\\REQUESTED',
    'E:\\ShareME\\SBAC '
@@ -1252,441 +1248,514 @@
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\sboms\\cryptography-rust.cyclonedx.json',
    'DATA'),
-  ('cryptography-49.0.0.dist-info\\licenses\\LICENSE.BSD',
+  ('cryptography-49.0.0.dist-info\\RECORD',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\licenses\\LICENSE.BSD',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\RECORD',
    'DATA'),
-  ('cryptography-49.0.0.dist-info\\sboms\\sbom.json',
+  ('cryptography-49.0.0.dist-info\\licenses\\LICENSE',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\sboms\\sbom.json',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('cryptography-49.0.0.dist-info\\WHEEL',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\WHEEL',
    'DATA'),
   ('cryptography-49.0.0.dist-info\\licenses\\LICENSE.APACHE',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\cryptography-49.0.0.dist-info\\licenses\\LICENSE.APACHE',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_tr.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_tr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ca.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ca.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_nl.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ca.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ca.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_hr.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hr.qm',
-   'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_cs.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_cs.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_da.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_da.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_bg.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_bg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_fr.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_fr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ar.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ar.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ko.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ko.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_es.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_es.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_es.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_es.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_uk.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_uk.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_fa.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fa.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_fa.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fa.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_es.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_es.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_lv.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_sv.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_en.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_en.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_it.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_it.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ca.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ca.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_de.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_de.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_sv.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_pl.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ru.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ru.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ko.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ko.qm',
-   'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_hu.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hu.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_hu.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hu.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_uk.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_uk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ja.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ja.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_de.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_de.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_gl.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_gl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_cs.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_cs.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_uk.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_uk.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_it.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_it.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_gd.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gd.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_hu.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hu.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ka.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ka.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_cs.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_cs.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ru.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ru.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_bg.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_bg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_it.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_it.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_nl.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_pl.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_hr.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_da.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_da.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_fr.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_sl.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ru.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ru.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_nn.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nn.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_fi.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fi.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_gd.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_gd.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_nn.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nn.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_lv.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_lt.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lt.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_de.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_de.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ka.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ka.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_lg.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lg.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_lg.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lg.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_bg.qm',
+  ('PyQt6\\Qt6\\translations\\qtbase_uk.qm',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_bg.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ko.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ko.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_da.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_da.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_en.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_en.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_sl.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_sk.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sk.qm',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_uk.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_gl.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gl.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_pl.qm',
+  ('PyQt6\\Qt6\\translations\\qtbase_ka.qm',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pl.qm',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ka.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
+  ('PyQt6\\Qt6\\translations\\qtbase_ru.qm',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_ka.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ka.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_ja.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ja.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_nl.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nl.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_fr.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_en.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_en.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_he.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_he.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_sv.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sv.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_hr.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hr.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qtbase_ar.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ar.qm',
-   'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_sk.qm',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sk.qm',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ru.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_sk.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sk.qm',
    'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_sl.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_es.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_es.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ja.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ja.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_cs.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_cs.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ka.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ka.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_de.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_hr.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ko.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_hr.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ko.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sk.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_nl.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_lv.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_lv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ca.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ca.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_da.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_da.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_fa.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fa.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_sv.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_sv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_bg.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_CN.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_nn.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_pl.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_nn.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_nn.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_es.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_es.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_gd.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_gd.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_bg.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_he.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_he.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_uk.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_cs.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_cs.qm',
+   'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_help_ja.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ja.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_uk.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_uk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_es.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_es.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ru.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ru.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ar.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ar.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_it.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_it.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ka.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ka.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_tr.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_tr.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_help_tr.qm',
+  ('PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_tr.qm',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_zh_TW.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qtbase_fi.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fi.qm',
    'DATA'),
-  ('PyQt6\\Qt6\\translations\\qt_he.qm',
+  ('PyQt6\\Qt6\\translations\\qt_ja.qm',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_he.qm',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ja.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_zh_TW.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_ca.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_ca.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_nl.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_nl.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_nl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_ca.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ca.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sl.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_en.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_pl.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_fi.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fi.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_TW.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ru.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ru.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_fr.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_fr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_hr.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_hr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_tr.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_tr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_lg.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_en.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_da.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_da.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_hu.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_hu.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_sk.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sk.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_gl.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_gl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_it.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_it.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_gd.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_gd.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_pl.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_pl.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_en.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_en.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_tr.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_tr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_bg.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_bg.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ko.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ko.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_fr.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_fr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_hu.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_hu.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_pt_PT.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_lt.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lt.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_ar.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_ar.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_sv.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_sv.qm',
    'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_nn.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_nn.qm',
    'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_de.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_lv.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_lv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_he.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_he.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_help_fr.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_fr.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_it.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_it.qm',
+   'DATA'),
   ('PyQt6\\Qt6\\translations\\qt_ar.qm',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_ar.qm',
    'DATA'),
-  ('argon2_cffi-25.1.0.dist-info\\RECORD',
+  ('PyQt6\\Qt6\\translations\\qt_da.qm',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\argon2_cffi-25.1.0.dist-info\\RECORD',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_da.qm',
    'DATA'),
-  ('argon2_cffi-25.1.0.dist-info\\licenses\\LICENSE',
+  ('PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
    'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\argon2_cffi-25.1.0.dist-info\\licenses\\LICENSE',
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_help_pt_BR.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qt_sv.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qt_sv.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_de.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_de.qm',
+   'DATA'),
+  ('PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\PyQt6\\Qt6\\translations\\qtbase_zh_CN.qm',
    'DATA'),
   ('argon2_cffi-25.1.0.dist-info\\INSTALLER',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\argon2_cffi-25.1.0.dist-info\\INSTALLER',
    'DATA'),
-  ('argon2_cffi-25.1.0.dist-info\\WHEEL',
-   'E:\\ShareME\\SBAC '
-   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\argon2_cffi-25.1.0.dist-info\\WHEEL',
-   'DATA'),
   ('argon2_cffi-25.1.0.dist-info\\REQUESTED',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\argon2_cffi-25.1.0.dist-info\\REQUESTED',
+   'DATA'),
+  ('argon2_cffi-25.1.0.dist-info\\licenses\\LICENSE',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\argon2_cffi-25.1.0.dist-info\\licenses\\LICENSE',
+   'DATA'),
+  ('argon2_cffi-25.1.0.dist-info\\RECORD',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\argon2_cffi-25.1.0.dist-info\\RECORD',
    'DATA'),
   ('argon2_cffi-25.1.0.dist-info\\METADATA',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\argon2_cffi-25.1.0.dist-info\\METADATA',
    'DATA'),
+  ('argon2_cffi-25.1.0.dist-info\\WHEEL',
+   'E:\\ShareME\\SBAC '
+   'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\.venv\\Lib\\site-packages\\argon2_cffi-25.1.0.dist-info\\WHEEL',
+   'DATA'),
   ('base_library.zip',
    'E:\\ShareME\\SBAC '
    'TAO\\NewYear25\\securevault\\securevault_v4\\securevault\\installer\\build\\securevault\\base_library.zip',
    'DATA')],
- [('sre_parse',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_parse.py',
+ [('enum',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\enum.py',
    'PYMODULE'),
-  ('linecache',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\linecache.py',
+  ('io',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\io.py',
    'PYMODULE'),
   ('locale',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\locale.py',
    'PYMODULE'),
   ('types',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\types.py',
+   'PYMODULE'),
+  ('re._parser',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\_parser.py',
+   'PYMODULE'),
+  ('re._constants',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\_constants.py',
+   'PYMODULE'),
+  ('re._compiler',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\_compiler.py',
+   'PYMODULE'),
+  ('re._casefix',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\_casefix.py',
+   'PYMODULE'),
+  ('re',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\__init__.py',
+   'PYMODULE'),
+  ('sre_parse',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_parse.py',
+   'PYMODULE'),
+  ('genericpath',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\genericpath.py',
+   'PYMODULE'),
+  ('warnings',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\warnings.py',
+   'PYMODULE'),
+  ('sre_constants',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_constants.py',
+   'PYMODULE'),
+  ('copyreg',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\copyreg.py',
+   'PYMODULE'),
+  ('weakref',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\weakref.py',
+   'PYMODULE'),
+  ('linecache',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\linecache.py',
+   'PYMODULE'),
+  ('ntpath',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\ntpath.py',
+   'PYMODULE'),
+  ('reprlib',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\reprlib.py',
+   'PYMODULE'),
+  ('keyword',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\keyword.py',
+   'PYMODULE'),
+  ('operator',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\operator.py',
+   'PYMODULE'),
+  ('abc',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\abc.py',
+   'PYMODULE'),
+  ('sre_compile',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_compile.py',
+   'PYMODULE'),
+  ('_collections_abc',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_collections_abc.py',
+   'PYMODULE'),
+  ('collections',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\collections\\__init__.py',
+   'PYMODULE'),
+  ('stat',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\stat.py',
+   'PYMODULE'),
+  ('traceback',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\traceback.py',
+   'PYMODULE'),
+  ('heapq',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\heapq.py',
    'PYMODULE'),
   ('encodings.zlib_codec',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\encodings\\zlib_codec.py',
@@ -2054,86 +2123,17 @@
   ('encodings',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\encodings\\__init__.py',
    'PYMODULE'),
-  ('heapq',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\heapq.py',
-   'PYMODULE'),
-  ('enum',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\enum.py',
-   'PYMODULE'),
-  ('io',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\io.py',
-   'PYMODULE'),
-  ('collections',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\collections\\__init__.py',
+  ('codecs',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\codecs.py',
    'PYMODULE'),
   ('_weakrefset',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_weakrefset.py',
    'PYMODULE'),
-  ('ntpath',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\ntpath.py',
-   'PYMODULE'),
-  ('sre_constants',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_constants.py',
-   'PYMODULE'),
-  ('codecs',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\codecs.py',
-   'PYMODULE'),
-  ('keyword',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\keyword.py',
-   'PYMODULE'),
-  ('genericpath',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\genericpath.py',
-   'PYMODULE'),
-  ('_collections_abc',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\_collections_abc.py',
-   'PYMODULE'),
-  ('re._parser',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\_parser.py',
-   'PYMODULE'),
-  ('re._constants',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\_constants.py',
-   'PYMODULE'),
-  ('re._compiler',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\_compiler.py',
-   'PYMODULE'),
-  ('re._casefix',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\_casefix.py',
-   'PYMODULE'),
-  ('re',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\re\\__init__.py',
-   'PYMODULE'),
-  ('weakref',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\weakref.py',
-   'PYMODULE'),
-  ('functools',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\functools.py',
-   'PYMODULE'),
-  ('traceback',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\traceback.py',
-   'PYMODULE'),
   ('posixpath',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\posixpath.py',
    'PYMODULE'),
-  ('reprlib',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\reprlib.py',
-   'PYMODULE'),
-  ('stat',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\stat.py',
-   'PYMODULE'),
-  ('operator',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\operator.py',
-   'PYMODULE'),
-  ('warnings',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\warnings.py',
-   'PYMODULE'),
-  ('copyreg',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\copyreg.py',
-   'PYMODULE'),
-  ('sre_compile',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\sre_compile.py',
-   'PYMODULE'),
-  ('abc',
-   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\abc.py',
+  ('functools',
+   'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\functools.py',
    'PYMODULE'),
   ('os',
    'C:\\Users\\ABEDY\\AppData\\Local\\Programs\\Python\\Python313\\Lib\\os.py',

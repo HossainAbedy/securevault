@@ -257,8 +257,13 @@
     if (!pending.password || Date.now()-pending.ts > 120_000) {
       LOG("expired or no password, clearing"); sessionStorage.removeItem(SESSION_KEY); return;
     }
-    if (pending.domain !== DOMAIN) {
-      LOG("domain mismatch:", pending.domain, "vs", DOMAIN); return;
+    function rootDomain(d) {
+      const parts = d.split('.');
+      return parts.length >= 2 ? parts.slice(-2).join('.') : d;
+    }
+    if (rootDomain(pending.domain) !== rootDomain(DOMAIN)) {
+      LOG("root domain mismatch:", rootDomain(pending.domain), "vs", rootDomain(DOMAIN));
+      return;
     }
 
     const formsHere = findLoginForms();
@@ -283,14 +288,93 @@
   }
 
   // ── Messages from background ──────────────────────────────────────────────
-  chrome.runtime.onMessage.addListener(msg => {
-    if (msg.type==="FILL_FORM") {
-      const forms=findLoginForms();
-      if (forms.length) fillForm(forms[0].userField,forms[0].pwField,msg.username,msg.password);
+  chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+    if (msg.type === "FILL_FORM") {
+      const forms = findLoginForms();
+      if (forms.length) fillForm(forms[0].userField, forms[0].pwField, msg.username, msg.password);
+    }
+
+    // ── NEW: Manual capture triggered from popup ──────────────────────────
+    if (msg.type === "MANUAL_CAPTURE") {
+      const forms = findLoginForms();
+      if (!forms.length) { sendResponse({ captured: false }); return; }
+      const { userField, pwField } = forms[0];
+      const password = pwField.value;
+      const username = userField?.value?.trim() || "";
+      if (!password) { sendResponse({ captured: false }); return; }
+      const pending = { username, password, url: location.href, domain: DOMAIN, ts: Date.now() };
+      try { sessionStorage.setItem(SESSION_KEY, JSON.stringify(pending)); } catch(e) {}
+      chrome.runtime.sendMessage(
+        { type: "CHECK_CREDENTIAL", url: pending.url, username, password },
+        (resp) => {
+          if (!resp || resp.action === "none") {
+            showBanner("save", pending, null); // force save banner even if vault check fails
+            return;
+          }
+          if (resp.action === "save")   showBanner("save",   pending, null);
+          if (resp.action === "update") showBanner("update", pending, resp.entry_id);
+        }
+      );
+      sendResponse({ captured: true });
+      return true;
+    }
+
+    // ── NEW: Manual entry form when no password field detected ────────────
+    if (msg.type === "SHOW_MANUAL_ENTRY") {
+      showManualEntryForm();
     }
   });
 
   // ── Main ──────────────────────────────────────────────────────────────────
+  function showManualEntryForm() {
+    if (document.getElementById("sv-manual")) return;
+    injectStyle();
+
+    const modal = document.createElement("div");
+    modal.id = "sv-manual";
+    modal.style.cssText = `
+      position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);
+      z-index:2147483647;background:#313244;border:1px solid #45475a;
+      border-radius:12px;padding:20px;min-width:320px;
+      box-shadow:0 8px 32px rgba(0,0,0,.6);font:13px 'Segoe UI',sans-serif;color:#cdd6f4;
+    `;
+    modal.innerHTML = `
+      <div style="font-weight:700;color:#89b4fa;margin-bottom:14px;font-size:14px">
+        🔐 Save to SecureVault
+      </div>
+      <div style="margin-bottom:8px;font-size:11px;color:#a6adc8">${esc(DOMAIN)}</div>
+      <input id="sv-m-user" placeholder="Username / Email" style="width:100%;background:#1e1e2e;
+        border:1px solid #45475a;border-radius:6px;padding:8px;color:#cdd6f4;
+        font-size:13px;margin-bottom:8px;box-sizing:border-box">
+      <input id="sv-m-pass" type="password" placeholder="Password" style="width:100%;
+        background:#1e1e2e;border:1px solid #45475a;border-radius:6px;padding:8px;
+        color:#cdd6f4;font-size:13px;margin-bottom:14px;box-sizing:border-box">
+      <div style="display:flex;gap:8px;justify-content:flex-end">
+        <button id="sv-m-cancel" style="background:#45475a;color:#cdd6f4;border:none;
+          border-radius:6px;padding:7px 14px;cursor:pointer;font-size:12px">Cancel</button>
+        <button id="sv-m-save" style="background:#89b4fa;color:#1e1e2e;border:none;
+          border-radius:6px;padding:7px 14px;cursor:pointer;font-weight:700;font-size:12px">Save</button>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    document.getElementById("sv-m-cancel").onclick = () => modal.remove();
+    document.getElementById("sv-m-save").onclick = () => {
+      const username = document.getElementById("sv-m-user").value.trim();
+      const password = document.getElementById("sv-m-pass").value;
+      if (!password) return;
+      chrome.runtime.sendMessage({
+        type: "SAVE_CREDENTIAL",
+        url: location.href,
+        username,
+        password,
+      });
+      modal.remove();
+      showToast("✅ Saved to SecureVault");
+    };
+  }
+
   function scan() {
     injectStyle();
     captureUsernameOnly();

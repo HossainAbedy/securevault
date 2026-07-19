@@ -108,4 +108,21 @@ async function init() {
   });
 }
 
+document.getElementById("save-btn").addEventListener("click", async () => {
+  const url = await currentTabUrl();
+  if (!url) return;
+
+  const [tab] = await new Promise(res =>
+    chrome.tabs.query({ active: true, currentWindow: true }, res)
+  );
+
+  chrome.tabs.sendMessage(tab.id, { type: "MANUAL_CAPTURE" }, (resp) => {
+    if (chrome.runtime.lastError || !resp || !resp.captured) {
+      // No form found — show manual entry dialog
+      chrome.tabs.sendMessage(tab.id, { type: "SHOW_MANUAL_ENTRY" });
+    }
+    window.close();
+  });
+});
+
 init();
