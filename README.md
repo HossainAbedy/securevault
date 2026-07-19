@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 🔐 SecureVault
 
 Offline password manager for Windows with military-grade encryption, desktop autofill, browser integration, and Windows DPAPI auto-unlock.
