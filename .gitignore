@@ -1,1 +1,19 @@
 browser_extension.pem
+# Build outputs
+#installer/build/
+#installer/dist/
+#installer/output/
+
+backups
+
+# Temporary files
+*.zip
+*.exe
+*.msi
+
+# Virtual environment
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]

@@ -1,3 +1,5 @@
+// SecureVault — Copyright (c) 2026 Hossain Abedy Supta
+// https://chromewebstore.google.com/detail/securevault/iehpbeonbgfhciidfllbdfjiphooechb
 /**
  * SecureVault — background service worker  (enhanced)
  *

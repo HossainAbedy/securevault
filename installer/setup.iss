@@ -3,7 +3,7 @@
 ; Produces: installer\output\SecureVaultSetup.exe
 
 #define AppName      "SecureVault"
-#define AppVersion   "1.0"
+#define AppVersion   "1.0.1"
 #define AppPublisher "Hossain Abedy"
 #define AppURL       "https://hossainabedy.com"
 #define HostName     "com.securevault.nativehost"

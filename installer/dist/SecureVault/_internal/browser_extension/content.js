@@ -1,3 +1,5 @@
+// SecureVault — Copyright (c) 2026 Hossain Abedy Supta
+// https://chromewebstore.google.com/detail/becngobgachhbpglojolpgioljnfddik
 (function () {
   "use strict";
   if (window.__sv_injected) return;
@@ -5,6 +7,7 @@
 
   const DOMAIN      = location.hostname.replace(/^www\./, "");
   const SESSION_KEY = "sv_pending_cred";
+  const PARTIAL_KEY = "sv_partial_username";
   const LOG = () => {};
 
   LOG("content script loaded on", location.href);
@@ -162,6 +165,37 @@
   // STEP 1 — capture() writes to sessionStorage inside the handler
   // (extension context is alive here — before navigation starts)
   // ══════════════════════════════════════════════════════════════════════════
+  // ── Multi-page login (e.g. Gmail — username and password on separate pages) ──
+  function captureUsernameOnly() {
+    const pwFields = document.querySelectorAll("input[type='password']");
+    if (pwFields.length > 0) return; // normal form — handled by monitorForm
+    const userFields = [...document.querySelectorAll(
+      "input[type='email'],input[type='text']," +
+      "input[name*='user'],input[name*='login'],input[name*='email']," +
+      "input[autocomplete*='username'],input[autocomplete*='email']"
+    )];
+    if (!userFields.length) return;
+    const userField = userFields[0];
+    const form = userField.closest("form");
+    const root = form || document.body;
+
+    function saveUsername() {
+      const username = userField.value.trim();
+      if (!username) return;
+      try {
+        sessionStorage.setItem(PARTIAL_KEY, JSON.stringify({
+          username, domain: DOMAIN, ts: Date.now()
+        }));
+      } catch(e) {}
+    }
+
+    if (form) form.addEventListener("submit", saveUsername, { capture: true });
+    userField.addEventListener("keydown", e => { if (e.key === "Enter") saveUsername(); });
+    root.querySelectorAll(
+      "button[type='submit'],input[type='submit'],button:not([type])"
+    ).forEach(btn => btn.addEventListener("click", saveUsername, { capture: true }));
+  }
+
   const _monitored = new WeakSet();
 
   function monitorForm(pwField, userField) {
@@ -171,7 +205,18 @@
 
     function capture() {
       const password = pwField.value;
-      const username = userField?.value?.trim() || "";
+      let username = userField?.value?.trim() || "";
+      if (!username) {
+        try {
+          const partial = JSON.parse(sessionStorage.getItem(PARTIAL_KEY) || "{}");
+          if (partial.username && partial.domain === DOMAIN &&
+              Date.now() - partial.ts < 300_000) {
+            username = partial.username;
+          }
+        } catch(e) {}
+      }
+      sessionStorage.removeItem(PARTIAL_KEY); // clear after use
+
       LOG("capture() fired — username:", username, "hasPassword:", !!password);
       if (!password) { LOG("capture: no password, skipping"); return; }
       const data = { username, password, url: location.href, domain: DOMAIN, ts: Date.now() };
@@ -248,6 +293,7 @@
   // ── Main ──────────────────────────────────────────────────────────────────
   function scan() {
     injectStyle();
+    captureUsernameOnly();
     const forms = findLoginForms();
     LOG("scan() found", forms.length, "password field(s)");
     if (!forms.length) return;

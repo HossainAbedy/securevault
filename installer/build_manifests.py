@@ -16,7 +16,7 @@ from pathlib import Path
 HOST_NAME = "com.securevault.nativehost"
 
 CHROME_EXTENSION_IDS = [
-    "iehpbeonbgfhciidfllbdfjiphooechb",
+    "becngobgachhbpglojolpgioljnfddik",
 ]
 FF_EXT_ID = "securevault@abedy"
 

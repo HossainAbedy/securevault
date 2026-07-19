@@ -1,3 +1,5 @@
+// SecureVault — Copyright (c) 2026 Hossain Abedy Supta
+// https://chromewebstore.google.com/detail/securevault/iehpbeonbgfhciidfllbdfjiphooechbs
 /**
  * SecureVault popup script.
  *
@@ -87,8 +89,6 @@ async function init() {
   creds.forEach((c) => {
     const li = document.createElement("li");
     li.className = "cred-item";
-
-    // eslint-disable-next-line no-unsanitized/property
     li.innerHTML = `
       <div class="cred-info">
         <div class="cred-title">${escHtml(c.title)}</div>

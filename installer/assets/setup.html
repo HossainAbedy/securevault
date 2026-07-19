@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,137 +30,122 @@
 </head>
 <body>
 
-<h1>🔐 SecureVault — Browser Extension Setup</h1>
+<div style="text-align:center;margin-top:20px;">
+    <img src="securevault.ico" width="96" alt="SecureVault Logo">
+    <h1 style="border:none;margin-bottom:5px;">SecureVault</h1>
+    <p style="color:#89b4fa;font-size:18px;">
+        Offline Password Manager for Windows
+    </p>
 
-<div class="ok">
-  <strong>What this does:</strong> Detects login forms on any website, lets you autofill
-  saved passwords, and prompts you to Save or Update credentials when you submit a login form —
-  just like 1Password or Bitwarden.
+    <p style="max-width:650px;margin:auto;color:#bac2de;">
+        SecureVault securely stores your passwords locally using
+        AES-256-GCM encryption, Windows DPAPI integration and browser
+        autofill. Your data never leaves your computer.
+    </p>
 </div>
 
-<h2>Before You Begin</h2>
-
 <div class="ok">
-The SecureVault installer has already:
+<b>Installation completed successfully.</b><br><br>
+
+The SecureVault desktop application has been installed and configured.
+
+The installer has already:
 
 <ul>
 <li>✔ Installed SecureVault</li>
-<li>✔ Registered the Native Messaging Host for Chrome and Microsoft Edge</li>
-<li>✔ Registered Firefox Native Messaging</li>
-<li>✔ Installed the Firefox Enterprise Policy (for the signed Firefox extension)</li>
-<li>✔ Generated all required manifest files automatically</li>
+<li>✔ Registered Native Messaging</li>
+<li>✔ Configured Chrome support</li>
+<li>✔ Configured Microsoft Edge support</li>
+<li>✔ Configured Mozilla Firefox support</li>
+<li>✔ Installed the Firefox Enterprise Policy</li>
 </ul>
 
-You only need to install the browser extension.
+Only the browser extension needs to be installed (Chrome/Edge).
+
+Firefox users can simply restart Firefox.
 </div>
 
-<h2>Step 1 — Install the Browser Extension</h2>
+<h2>Google Chrome</h2>
 
 <div class="step">
 <span class="num">1</span>
 
-Open Chrome:
+Open
 
 <br><br>
 
-<code>chrome://extensions</code>
-
-</div>
-
-<div class="step">
-<span class="num">2</span>
-
-Enable <strong>Developer Mode</strong>.
-
-</div>
-
-<div class="step">
-<span class="num">3</span>
-
-Click <strong>Load unpacked</strong>.
-
-</div>
-
-<div class="step">
-<span class="num">4</span>
-
-Browse to:
+<code>https://chromewebstore.google.com/detail/becngobgachhbpglojolpgioljnfddik</code>
 
 <br><br>
 
-<code>C:\Program Files\SecureVault\browser_extension</code>
-
+Click <b>Add to Chrome</b>.
 </div>
 
-<div class="step">
-<span class="num">5</span>
-
-Select the folder.
-
-Chrome will install the SecureVault extension.
-
+<div class="ok">
+No Developer Mode is required.
 </div>
 
-<h2>Step 2 — Install in Microsoft Edge</h2>
+<hr>
+
+<h2>Microsoft Edge</h2>
 
 <div class="step">
+<span class="num">1</span>
+
 Open
 
 <br><br>
 
 <code>edge://extensions</code>
 
-<br><br>
-
-Enable Developer Mode
-
-<br>
-
-Click <strong>Load unpacked</strong>
-
-<br>
-
-Select
-
-<code>C:\Program Files\SecureVault\browser_extension</code>
-
-</div>
-
-<h2>Step 3 — Mozilla Firefox</h2>
-
-<div class="ok">
-The Firefox extension included with SecureVault is <strong>digitally signed by Mozilla</strong>.
-
-The SecureVault installer automatically installs the required Firefox Enterprise Policy and registers the Native Messaging Host.
-
-No manual configuration is required.
-</div>
-
-<div class="step">
-<span class="num">1</span>
-
-Simply install SecureVault using the installer.
-
 </div>
 
 <div class="step">
 <span class="num">2</span>
 
-Launch Mozilla Firefox.
+Enable <b>Developer Mode</b>
 
 </div>
 
 <div class="step">
 <span class="num">3</span>
 
-The SecureVault extension should already be available.
-
-If Firefox was open during installation, restart Firefox once.
+Click <b>Load unpacked</b>
 
 </div>
 
 <div class="step">
 <span class="num">4</span>
+
+Browse to
+
+<br><br>
+
+<code>C:\Program Files\SecureVault\browser_extension</code>
+
+</div>
+
+<hr>
+
+<h2>Mozilla Firefox</h2>
+
+<div class="ok">
+
+The SecureVault Firefox extension is digitally signed by Mozilla.
+
+No manual installation is normally required.
+
+</div>
+
+<div class="step">
+<span class="num">1</span>
+
+Restart Firefox after installing SecureVault.
+
+</div>
+
+<div class="step">
+<span class="num">2</span>
 
 Open
 
@@ -168,153 +153,192 @@ Open
 
 <code>about:addons</code>
 
-<br><br>
+</div>
 
-Verify that <strong>SecureVault</strong> appears in the Extensions list and is enabled.
+<div class="step">
+<span class="num">3</span>
+
+Verify that
+
+<b>SecureVault</b>
+
+appears in the Extensions list.
 
 </div>
 
 <div class="ok">
 
-Firefox users do not need to:
-
-<ul>
-<li>Use <code>about:debugging</code></li>
-<li>Load a temporary add-on</li>
-<li>Edit any manifest files</li>
-<li>Modify the Windows Registry</li>
-</ul>
-
-Everything is configured automatically by the SecureVault installer.
+If Firefox was already running during installation,
+a restart is usually all that is required.
 
 </div>
 
-<div class="ok">
+<hr>
 
-The SecureVault installer has already:
-
-<ul>
-<li>✔ Registered the Firefox Native Messaging Host</li>
-<li>✔ Installed the Firefox Enterprise Policy</li>
-<li>✔ Configured SecureVault to communicate with the desktop application</li>
-</ul>
-
-No additional configuration or manifest editing is required.
-
-</div>
-
-<div class="ok">
-
-Nothing else needs to be configured.
-
-The installer has already registered the Native Messaging Host and generated the required configuration files.
-
-Simply reload the extension if you update SecureVault.
-
-</div>
-
-<h2>Step 4 — Test It</h2>
+<h2>Test SecureVault</h2>
 
 <div class="step">
-  <span class="num">1</span>
-  Make sure the <strong>SecureVault application is running</strong> and your vault is unlocked
-  (it can be minimised to tray)
+<span class="num">1</span>
+
+Launch SecureVault and unlock your vault.
+
 </div>
 
 <div class="step">
-  <span class="num">2</span>
-  Launch SecureVault from the Start Menu or Desktop shortcut.
+<span class="num">2</span>
+
+Visit
+
+<code>https://github.com/login</code>
+
 </div>
 
 <div class="step">
-  <span class="num">3</span>
-  Navigate to any login page, e.g. <code>https://github.com/login</code>
+<span class="num">3</span>
+
+The floating SecureVault button should appear beside the login form.
+
 </div>
 
 <div class="step">
-  <span class="num">4</span>
-  A floating <strong>🔐 SecureVault</strong> button should appear at the bottom-right
+<span class="num">4</span>
+
+Click the button to autofill your saved credentials.
+
 </div>
 
 <div class="step">
-  <span class="num">5</span>
-  Click it — if you have github.com saved, it fills the form automatically.
-  If you have multiple entries for that domain, a picker appears.
+<span class="num">5</span>
+
+Submitting a new login automatically offers to Save or Update credentials.
+
 </div>
 
-<div class="step">
-  <span class="num">6</span>
-  Click the <strong>🔐 toolbar icon</strong> to open the popup — it lists all
-  credentials for the current domain with individual Fill buttons.
-</div>
+<hr>
 
-<h2>How the Save / Update Prompt Works</h2>
+<h2>Features</h2>
 
 <table>
-  <tr><th>Scenario</th><th>What appears</th><th>Action</th></tr>
-  <tr><td>You submit a login form with credentials NOT in the vault</td>
-      <td>Blue banner at top: "Save password to SecureVault?"</td>
-      <td>Click Save → stored instantly</td></tr>
-  <tr><td>You submit a login form with credentials that ARE in the vault but password changed</td>
-      <td>Blue banner: "Update saved password?"</td>
-      <td>Click Update → old password replaced</td></tr>
-  <tr><td>Credentials match exactly what's stored</td>
-      <td>No prompt (nothing to do)</td>
-      <td>—</td></tr>
-  <tr><td>Vault is not linked to Windows account</td>
-      <td>No prompt (DPAPI auth fails silently)</td>
-      <td>Open app → ⚙ Link Windows Acct</td></tr>
+
+<tr>
+<th>Feature</th>
+<th>Description</th>
+</tr>
+
+<tr>
+<td>Offline Storage</td>
+<td>Passwords remain on your PC only.</td>
+</tr>
+
+<tr>
+<td>AES-256-GCM Encryption</td>
+<td>Each credential is encrypted individually.</td>
+</tr>
+
+<tr>
+<td>Windows DPAPI</td>
+<td>Passwordless unlock tied to your Windows account.</td>
+</tr>
+
+<tr>
+<td>Password Generator</td>
+<td>Create strong passwords instantly.</td>
+</tr>
+
+<tr>
+<td>Desktop Autofill</td>
+<td>Ctrl + Shift + F anywhere in Windows.</td>
+</tr>
+
+<tr>
+<td>Browser Autofill</td>
+<td>Chrome, Edge and Firefox support.</td>
+</tr>
+
+<tr>
+<td>Import Passwords</td>
+<td>Import from Chrome, Edge, Firefox and CSV.</td>
+</tr>
+
 </table>
 
-<div class="warn">
-  ⚠ The save/update prompt requires your vault to be linked to your Windows account
-  (DPAPI). If you created the vault with master password only, click
-  <strong>⚙ Link Windows Acct</strong> in the app toolbar first.
-</div>
-
-<div class="warn">
-
-Chrome and Microsoft Edge currently use the unpacked development extension.
-
-This requires enabling Developer Mode once and loading the extension manually.
-
-Mozilla Firefox uses the signed SecureVault extension and does not require Developer Mode.
-
-Support for one-click installation and automatic updates for Chrome and Microsoft Edge will be available after the Chrome Web Store and Microsoft Edge Add-ons submissions are approved.
-
-</div>
+<hr>
 
 <h2>Troubleshooting</h2>
 
 <table>
-  <tr><th>Problem</th><th>Fix</th></tr>
-  <tr><td>🔐 button doesn't appear</td>
-      <td>The page has no &lt;input type="password"&gt;. Try the toolbar popup instead.</td></tr>
-  <tr><td>Popup shows "SecureVault app not running"</td>
-      <td>Launch <code>SecureVault.exe</code> — the app must be running (can be in tray)</td></tr>
-  <tr><td>Popup shows "No vault linked to Windows account"</td>
-      <td>Open app → ⚙ Link Windows Acct</td></tr>
-  <tr><td>Extension loads but fill does nothing</td>
-      <td>Restart SecureVault, then reload the browser extension.</td></tr>
-  <tr>
-      <td>Extension cannot connect to SecureVault</td>
-      <td>
-      Reload the extension from <code>chrome://extensions</code> or <code>edge://extensions</code> after reinstalling SecureVault.
-      </td>
-  </tr>
-  <tr>
-      <td>Firefox extension not visible</td>
-      <td>Restart Firefox after installing SecureVault. If necessary, reinstall SecureVault to reinstall the signed extension.</td>
-  </tr>
-  <tr><td>Edge: extension not found</td>
-      <td>Go to <code>edge://extensions</code> and load unpacked separately</td></tr>
+
+<tr>
+<th>Problem</th>
+<th>Solution</th>
+</tr>
+
+<tr>
+<td>Extension cannot connect</td>
+<td>Ensure SecureVault is running.</td>
+</tr>
+
+<tr>
+<td>No autofill button</td>
+<td>The webpage may not contain a password field.</td>
+</tr>
+
+<tr>
+<td>No Save prompt</td>
+<td>Link your vault to your Windows account.</td>
+</tr>
+
+<tr>
+<td>Firefox extension missing</td>
+<td>Restart Firefox or reinstall SecureVault.</td>
+</tr>
+
+<tr>
+<td>Edge extension missing</td>
+<td>Load the unpacked extension manually.</td>
+</tr>
+
 </table>
 
-<hr style="border-color:#313244; margin-top:40px">
-<p style="color:#585b70; font-size:12px; text-align:center">
-  SecureVault v1.0 — Hossain Abedy — July 2026
-</p>
+<div class="warn">
+
+<b>Security Notice</b><br><br>
+
+SecureVault never uploads your passwords or personal data.
+
+All encryption is performed locally on your computer.
+
+</div>
+
+<hr style="margin-top:50px;border-color:#313244;">
+
+<div style="text-align:center;line-height:1.8;">
+
+<b>SecureVault v1.0</b><br>
+
+Created by <b>Hossain Abedy</b><br>
+
+<a href="https://github.com/HossainAbedy/securevault/releases/tag/v1.0.0"
+style="color:#89b4fa;">
+Download Latest Release
+</a>
+
+<br>
+
+<a href="https://chromewebstore.google.com/detail/becngobgachhbpglojolpgioljnfddik"
+style="color:#89b4fa;">
+Chrome Web Store
+</a>
+
+<br>
+
+<a href="https://www.hossainabedy.com/policies/securevault/privacy-policy.html"
+style="color:#89b4fa;">
+Privacy Policy
+</a>
+
+</div>
 
 </body>
 </html>
-```
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 🔐 SecureVault
 
 Offline password manager for Windows with military-grade encryption, desktop autofill, browser integration, and Windows DPAPI auto-unlock.
@@ -22,6 +23,7 @@ SecureVault is designed to keep your passwords local. Your vault never leaves yo
 | 🖥 System Tray             | Runs quietly in the background with quick access.                                     |
 | 🗂 Categories              | Banking, Email, Social, Shopping, Work, General and more.                             |
 
+=======
 
 ---
 
@@ -244,7 +246,54 @@ Mozilla Add-ons (approved)
 
 SecureVault is digitally signed using the SignPath Foundation code-signing service.
 
-## Licence
+## Project Status
 
+<<<<<<< HEAD
 Copyright © 2026 Hossain Abedy Supta. All rights reserved.
 MIT Licence — see LICENSE file.
+=======
+SecureVault is under active development.
+
+Current release includes:
+
+- Offline encrypted password vault
+- Chrome integration
+- Microsoft Edge integration
+- Mozilla Firefox integration
+- Browser password import
+- Desktop autofill
+- Windows DPAPI auto-unlock
+- Password generator
+- Native Messaging support
+
+Additional features are planned for future releases.
+
+---
+
+## Website
+
+Privacy Policy:
+https://www.hossainabedy.com/policies/securevault/privacy-policy.html
+
+GitHub:
+https://github.com/HossainAbedy/securevault
+
+Releases:
+https://github.com/HossainAbedy/securevault/releases
+
+Chrome Web Store:
+https://chromewebstore.google.com/detail/becngobgachhbpglojolpgioljnfddik
+
+---
+
+## License
+
+Copyright © 2026 Hossain Abedy.
+All rights reserved.
+
+This repository is provided for reference purposes only.
+
+No part of this software may be copied, modified, redistributed, sublicensed, or used to create derivative works without prior written permission from the copyright holder.
+
+The SecureVault name, logo, branding, and source code are proprietary.
+>>>>>>> 879259e (Release v1.0.1)
