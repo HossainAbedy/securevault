@@ -1,344 +1,775 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>SecureVault Extension Setup</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecureVault — Support</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  body { font-family: 'Segoe UI', sans-serif; max-width: 780px; margin: 40px auto;
-         background: #1e1e2e; color: #cdd6f4; line-height: 1.6; padding: 0 20px; }
-  h1   { color: #89b4fa; font-size: 26px; border-bottom: 2px solid #313244; padding-bottom: 10px; }
-  h2   { color: #89b4fa; font-size: 18px; margin-top: 32px; }
-  .step { background: #313244; border-radius: 10px; padding: 16px 20px;
-          margin: 14px 0; border-left: 4px solid #89b4fa; }
-  .step .num { background: #89b4fa; color: #1e1e2e; font-weight: 700;
-               border-radius: 50%; width: 26px; height: 26px; display: inline-flex;
-               align-items: center; justify-content: center; margin-right: 10px; font-size: 14px; }
-  code { background: #181825; color: #a6e3a1; padding: 3px 8px;
-         border-radius: 4px; font-family: Consolas, monospace; font-size: 13px; }
-  .warn { background: #2a1f1f; border-left: 4px solid #f38ba8;
-          border-radius: 8px; padding: 12px 16px; margin: 12px 0; color: #f38ba8; }
-  .ok   { background: #1a2a1a; border-left: 4px solid #a6e3a1;
-          border-radius: 8px; padding: 12px 16px; margin: 12px 0; color: #a6e3a1; }
-  img-placeholder { display: block; background: #252536; border-radius: 8px;
-                    padding: 20px; text-align: center; color: #585b70; margin: 10px 0; }
-  table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-  th { background: #313244; padding: 10px; text-align: left; color: #89b4fa; }
-  td { padding: 9px 10px; border-bottom: 1px solid #313244; }
-  tr:nth-child(even) td { background: #252536; }
+  :root {
+    --bg:       #1e1e2e;
+    --surface:  #313244;
+    --surface2: #252536;
+    --border:   #45475a;
+    --border2:  #585b70;
+    --blue:     #89b4fa;
+    --blue2:    #b4befe;
+    --text:     #cdd6f4;
+    --subtext:  #a6adc8;
+    --green:    #a6e3a1;
+    --red:      #f38ba8;
+    --orange:   #fab387;
+    --yellow:   #f9e2af;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  /* ── Topbar ── */
+  .topbar {
+    background: var(--surface2);
+    border-bottom: 1px solid var(--border);
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  .topbar .logo { font-size: 22px; }
+  .topbar .name { font-size: 16px; font-weight: 700; color: var(--blue); text-decoration: none; }
+  .topbar .name:hover { color: var(--blue2); }
+  .topbar .sep { color: var(--border); margin: 0 4px; }
+  .topbar .page { color: var(--subtext); font-size: 14px; }
+  .topbar nav { margin-left: auto; display: flex; gap: 20px; }
+  .topbar nav a { color: var(--subtext); text-decoration: none; font-size: 13px; font-weight: 500; transition: color .15s; }
+  .topbar nav a:hover { color: var(--blue); }
+
+  /* ── Hero ── */
+  .hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #252536 50%, #1e1e2e 100%);
+    border-bottom: 1px solid var(--border);
+    padding: 56px 32px 40px;
+    text-align: center;
+  }
+  .hero-icon { font-size: 52px; margin-bottom: 14px; display: block; }
+  .hero h1 { font-size: 30px; font-weight: 700; color: var(--blue); margin-bottom: 8px; }
+  .hero p { color: var(--subtext); font-size: 15px; margin-bottom: 28px; }
+  .version-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: #1a2a3a; border: 1px solid var(--blue);
+    border-radius: 100px; padding: 6px 16px;
+    color: var(--blue); font-size: 13px; font-weight: 600;
+    text-decoration: none; transition: background .15s;
+  }
+  .version-badge:hover { background: #1f3048; }
+
+  /* ── Layout ── */
+  .layout {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 32px 80px;
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  /* ── Sidebar nav ── */
+  .sidebar {
+    position: sticky;
+    top: 70px;
+  }
+  .sidebar-label {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--subtext);
+    text-transform: uppercase;
+    letter-spacing: .8px;
+    margin-bottom: 8px;
+    padding-left: 4px;
+  }
+  .sidebar a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: var(--subtext);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: background .15s, color .15s;
+    margin-bottom: 2px;
+  }
+  .sidebar a:hover, .sidebar a.active { background: var(--surface); color: var(--blue); }
+  .sidebar .s-icon { font-size: 15px; width: 20px; text-align: center; }
+
+  /* ── Content ── */
+  .content section {
+    margin-bottom: 48px;
+    scroll-margin-top: 90px;
+  }
+  .section-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-title .t-icon { font-size: 22px; }
+
+  /* ── Cards ── */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+  }
+  .card:hover { border-color: var(--border2); }
+  .card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 10px; }
+  .card p { color: var(--subtext); font-size: 14px; }
+
+  /* ── Steps ── */
+  .step {
+    display: flex;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-bottom: 10px;
+    align-items: flex-start;
+  }
+  .step:hover { border-color: var(--border2); }
+  .step-num {
+    background: var(--blue);
+    color: #1e1e2e;
+    font-weight: 700;
+    font-size: 13px;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+  .step-body h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+  .step-body p { font-size: 13px; color: var(--subtext); }
+
+  /* ── Callouts ── */
+  .callout {
+    border-radius: 10px;
+    padding: 14px 18px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+    font-size: 14px;
+  }
+  .callout .c-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .callout p { margin: 0; }
+  .callout.green { background: #1a2a1a; border: 1px solid var(--green); color: var(--green); }
+  .callout.orange { background: #2a1f10; border: 1px solid var(--orange); color: var(--orange); }
+  .callout.red { background: #2a1010; border: 1px solid var(--red); color: var(--red); }
+  .callout.blue { background: #1a1f3a; border: 1px solid var(--blue); color: var(--blue); }
+
+  /* ── Code ── */
+  code {
+    background: var(--surface2);
+    color: var(--blue2);
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    padding: 2px 7px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+  }
+  .code-block {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-family: 'Courier New', monospace;
+    font-size: 13px;
+    color: var(--blue2);
+    margin: 12px 0;
+    white-space: pre;
+    overflow-x: auto;
+    line-height: 1.6;
+  }
+
+  /* ── Trouble table ── */
+  .trouble-item {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+  }
+  .trouble-item:hover { border-color: var(--border2); }
+  .trouble-q {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--red);
+    margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .trouble-a {
+    font-size: 13px;
+    color: var(--subtext);
+    padding-left: 22px;
+  }
+
+  /* ── Release card ── */
+  .release {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 14px;
+  }
+  .release-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .release-ver {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--blue);
+  }
+  .release-date {
+    font-size: 12px;
+    color: var(--subtext);
+    background: var(--surface2);
+    padding: 3px 10px;
+    border-radius: 100px;
+    border: 1px solid var(--border);
+  }
+  .release-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+  }
+  .tag-latest { background: #1a2a1a; border: 1px solid var(--green); color: var(--green); }
+  .tag-stable { background: #1a1f3a; border: 1px solid var(--blue); color: var(--blue); }
+  .release ul { list-style: none; padding: 0; }
+  .release ul li {
+    font-size: 13px;
+    color: var(--subtext);
+    padding: 4px 0;
+    display: flex;
+    gap: 8px;
+  }
+  .release ul li::before { content: "→"; color: var(--blue); flex-shrink: 0; }
+  .dl-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--blue);
+    color: #1e1e2e;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    padding: 8px 18px;
+    border-radius: 8px;
+    margin-top: 14px;
+    transition: background .15s;
+  }
+  .dl-btn:hover { background: var(--blue2); }
+
+  /* ── Use case grid ── */
+  .use-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .use-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    transition: border-color .15s;
+  }
+  .use-card:hover { border-color: var(--blue); }
+  .use-card .u-icon { font-size: 24px; margin-bottom: 10px; display: block; }
+  .use-card h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
+  .use-card p { font-size: 13px; color: var(--subtext); }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 24px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  footer p { color: var(--subtext); font-size: 13px; }
+  footer a { color: var(--blue); text-decoration: none; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { color: var(--subtext); font-size: 13px; text-decoration: none; transition: color .15s; }
+  .footer-links a:hover { color: var(--blue); }
+
+  @media (max-width: 700px) {
+    .layout { grid-template-columns: 1fr; padding: 24px 16px 60px; }
+    .sidebar { display: none; }
+    .topbar nav { display: none; }
+    .use-grid { grid-template-columns: 1fr; }
+    .hero { padding: 36px 16px 28px; }
+    footer { padding: 20px 16px; }
+  }
 </style>
 </head>
 <body>
 
-<div style="text-align:center;margin-top:20px;">
-    <img src="securevault.ico" width="96" alt="SecureVault Logo">
-    <h1 style="border:none;margin-bottom:5px;">SecureVault</h1>
-    <p style="color:#89b4fa;font-size:18px;">
-        Offline Password Manager for Windows
-    </p>
-
-    <p style="max-width:650px;margin:auto;color:#bac2de;">
-        SecureVault securely stores your passwords locally using
-        AES-256-GCM encryption, Windows DPAPI integration and browser
-        autofill. Your data never leaves your computer.
-    </p>
+<!-- Topbar -->
+<div class="topbar">
+  <span class="logo">🔐</span>
+  <a href="https://www.hossainabedy.com/policies/securevault/support-policy.html" class="name">SecureVault</a>
+  <span class="sep">›</span>
+  <span class="page">Support</span>
+  <nav>
+    <a href="https://www.hossainabedy.com/policies/securevault/support-policy.html">Home</a>
+    <a href="https://www.hossainabedy.com/policies/securevault/privacy-policy.html">Privacy Policy</a>
+    <a href="https://chromewebstore.google.com/detail/becngobgachhbpglojolpgioljnfddik">Extension</a>
+  </nav>
 </div>
 
-<div class="ok">
-<b>Installation completed successfully.</b><br><br>
-
-The SecureVault desktop application has been installed and configured.
-
-The installer has already:
-
-<ul>
-<li>✔ Installed SecureVault</li>
-<li>✔ Registered Native Messaging</li>
-<li>✔ Configured Chrome support</li>
-<li>✔ Configured Microsoft Edge support</li>
-<li>✔ Configured Mozilla Firefox support</li>
-<li>✔ Installed the Firefox Enterprise Policy</li>
-</ul>
-
-Only the browser extension needs to be installed (Chrome/Edge).
-
-Firefox users can simply restart Firefox.
+<!-- Hero -->
+<div class="hero">
+  <span class="hero-icon">🔐</span>
+  <h1>SecureVault Support</h1>
+  <p>Installation guide, troubleshooting, and release notes</p>
+  <a href="https://github.com/HossainAbedy/securevault/releases/tag/v1.0.2" class="version-badge">
+    ⬇ Download v1.0.2 — Latest Release
+  </a>
 </div>
 
-<h2>Google Chrome</h2>
+<!-- Layout -->
+<div class="layout">
 
-<div class="step">
-<span class="num">1</span>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-label">On this page</div>
+    <a href="#install"><span class="s-icon">📥</span> Installation</a>
+    <a href="#browser"><span class="s-icon">🌐</span> Browser Extension</a>
+    <a href="#usage"><span class="s-icon">⚡</span> How to Use</a>
+    <a href="#usecases"><span class="s-icon">💡</span> Use Cases</a>
+    <a href="#uninstall"><span class="s-icon">🗑️</span> Uninstall</a>
+    <a href="#troubleshoot"><span class="s-icon">🔧</span> Troubleshooting</a>
+    <a href="#releases"><span class="s-icon">📦</span> Releases</a>
+    <a href="#contact"><span class="s-icon">✉️</span> Contact</a>
+  </aside>
 
-Open
+  <!-- Main content -->
+  <div class="content">
 
-<br><br>
+    <!-- INSTALL -->
+    <section id="install">
+      <div class="section-title">
+        <span class="t-icon">📥</span> Installation
+      </div>
 
-<code>https://chromewebstore.google.com/detail/becngobgachhbpglojolpgioljnfddik</code>
+      <div class="callout green">
+        <span class="c-icon">✓</span>
+        <p>The Windows installer handles everything automatically — native messaging, Firefox policy, shortcuts, and registry entries. No Python required on the target machine.</p>
+      </div>
 
-<br><br>
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Download the installer</h4>
+          <p>Download <code>SecureVaultSetup.exe</code> from the <a href="https://github.com/HossainAbedy/securevault/releases/tag/v1.0.2" style="color:var(--blue)">Releases page</a>.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Run the installer</h4>
+          <p>Double-click <code>SecureVaultSetup.exe</code>. If Windows SmartScreen appears, click <strong>More info → Run anyway</strong>. Follow the setup wizard.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Create your vault</h4>
+          <p>On first launch, click <strong>Create new vault</strong>. Enter a username and master password. Tick <strong>Link to current Windows account</strong> to enable silent auto-unlock.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <h4>Install the browser extension</h4>
+          <p>See the Browser Extension section below.</p>
+        </div>
+      </div>
 
-Click <b>Add to Chrome</b>.
+      <div class="callout orange">
+        <span class="c-icon">⚠</span>
+        <p>Requires Windows 10 or Windows 11. DPAPI auto-unlock is Windows-only. Python is not required — the installer includes a bundled runtime.</p>
+      </div>
+
+      <div class="card">
+        <h3>Development / Source Install</h3>
+        <p>To run from source, Python 3.11+ is required.</p>
+        <div class="code-block">git clone https://github.com/YOUR_USERNAME/securevault.git
+cd securevault
+python -m venv .venv
+source .venv/Scripts/activate   # Git Bash
+pip install -r requirements.txt
+python main.py</div>
+      </div>
+    </section>
+
+    <!-- BROWSER -->
+    <section id="browser">
+      <div class="section-title">
+        <span class="t-icon">🌐</span> Browser Extension
+      </div>
+
+      <div class="card">
+        <h3>🌐 Chrome & Microsoft Edge — Chrome Web Store</h3>
+        <p style="margin-bottom:12px">The easiest method — installs with one click, updates automatically.</p>
+        <a href="https://chromewebstore.google.com/detail/becngobgachhbpglojolpgioljnfddik"
+           style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);color:#1e1e2e;
+                  text-decoration:none;font-weight:700;font-size:13px;padding:8px 16px;
+                  border-radius:8px;transition:background .15s"
+           onmouseover="this.style.background='#b4befe'"
+           onmouseout="this.style.background='#89b4fa'">
+          Install from Chrome Web Store →
+        </a>
+      </div>
+
+      <div class="card">
+        <h3>🔧 Chrome & Edge — Manual (Load unpacked)</h3>
+        <div class="step" style="margin-bottom:8px">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Open Extensions</h4>
+            <p>Chrome: <code>chrome://extensions</code> &nbsp;·&nbsp; Edge: <code>edge://extensions</code></p>
+          </div>
+        </div>
+        <div class="step" style="margin-bottom:8px">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Enable Developer Mode</h4>
+            <p>Toggle in the top-right corner of the extensions page.</p>
+          </div>
+        </div>
+        <div class="step" style="margin-bottom:8px">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>Load unpacked</h4>
+            <p>Click <strong>Load unpacked</strong> → navigate to and select:<br>
+            <code>C:\Program Files\SecureVault\browser_extension</code></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>🦊 Mozilla Firefox</h3>
+        <div class="callout green" style="margin-bottom:0">
+          <span class="c-icon">✓</span>
+          <p>The installer automatically configures Firefox via enterprise policy. Simply restart Firefox after installation — the extension appears automatically. No manual steps required.</p>
+        </div>
+      </div>
+
+      <div class="callout blue">
+        <span class="c-icon">ℹ</span>
+        <p>All browsers require the <strong>SecureVault desktop app to be running</strong> (in the system tray is fine) for the extension to communicate with the vault.</p>
+      </div>
+    </section>
+
+    <!-- USAGE -->
+    <section id="usage">
+      <div class="section-title">
+        <span class="t-icon">⚡</span> How to Use
+      </div>
+
+      <div class="card">
+        <h3>🔑 Autofill a saved password</h3>
+        <p>Visit any login page. A floating <strong>🔐 SecureVault</strong> button appears at the bottom-right. Click it to autofill. If multiple credentials exist for that site, a picker appears.</p>
+      </div>
+
+      <div class="card">
+        <h3>💾 Save a new password</h3>
+        <p>Log in to any site with credentials not yet in your vault. After the page redirects on successful login, a banner appears at the top: <em>"Save password to SecureVault?"</em> Click <strong>Save</strong>.</p>
+      </div>
+
+      <div class="card">
+        <h3>🔄 Update a changed password</h3>
+        <p>After changing a password on any site and logging in with the new one, a banner appears: <em>"Update saved password?"</em> Click <strong>Update</strong> — the old password is replaced instantly.</p>
+      </div>
+
+      <div class="card">
+        <h3>⌨ Desktop autofill — Ctrl+Shift+F</h3>
+        <p>Press <code>Ctrl+Shift+F</code> while any desktop application or browser is in focus. SecureVault matches credentials to the active window title and shows a picker. After selection, it types username → Tab → password.</p>
+        <div class="callout orange" style="margin-top:12px;margin-bottom:0">
+          <span class="c-icon">⚠</span>
+          <p>Run SecureVault as Administrator if the target window is elevated (e.g. Task Manager).</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h3>📥 Import from another password manager</h3>
+        <p>Open the app → toolbar → <strong>📥 Import</strong>. Supports Chrome, Edge, Firefox, Bitwarden, KeePass, 1Password, and any generic CSV with url/username/password columns.</p>
+      </div>
+
+      <div class="card">
+        <h3>🔒 Lock the vault</h3>
+        <p>Click <strong>🔒 Lock</strong> in the toolbar. The vault key is zeroed from memory immediately. Re-authentication is required to access any credentials.</p>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="usecases">
+      <div class="section-title">
+        <span class="t-icon">💡</span> Use Cases
+      </div>
+      <div class="use-grid">
+        <div class="use-card">
+          <span class="u-icon">🏦</span>
+          <h4>Regulated environments</h4>
+          <p>IT policies that prohibit browser password saving or cloud credential managers — SecureVault stays entirely local.</p>
+        </div>
+        <div class="use-card">
+          <span class="u-icon">🔐</span>
+          <h4>Security professionals</h4>
+          <p>Full control over encryption, key derivation, and storage. Auditable codebase. No black-box cloud service.</p>
+        </div>
+        <div class="use-card">
+          <span class="u-icon">🏠</span>
+          <h4>Personal privacy</h4>
+          <p>Keep passwords off third-party servers. AES-256-GCM encryption means even physical access to your PC doesn't expose credentials without the key.</p>
+        </div>
+        <div class="use-card">
+          <span class="u-icon">🖥</span>
+          <h4>Multi-browser users</h4>
+          <p>One vault works across Chrome, Edge, and Firefox. Import existing passwords from all three in one step.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- UNINSTALL -->
+    <section id="uninstall">
+      <div class="section-title">
+        <span class="t-icon">🗑️</span> Uninstall
+      </div>
+
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <h4>Uninstall via Windows</h4>
+          <p>Settings → Apps → SecureVault → Uninstall. This removes the app, native host, registry entries, and Firefox policy automatically.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <h4>Remove the browser extension</h4>
+          <p>Chrome/Edge: <code>chrome://extensions</code> → Remove SecureVault.<br>Firefox: <code>about:addons</code> → Remove SecureVault.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <h4>Delete your vault (optional)</h4>
+          <p>Your encrypted vault database is kept at <code>%USERPROFILE%\.securevault\</code>. Delete this folder to remove all stored credentials permanently.</p>
+        </div>
+      </div>
+
+      <div class="callout orange">
+        <span class="c-icon">⚠</span>
+        <p>Deleting the vault folder is irreversible. Export or note down any credentials you need before doing this.</p>
+      </div>
+    </section>
+
+    <!-- TROUBLESHOOT -->
+    <section id="troubleshoot">
+      <div class="section-title">
+        <span class="t-icon">🔧</span> Troubleshooting
+      </div>
+
+      <div class="trouble-item">
+        <div class="trouble-q">❌ App opens to login screen every time instead of auto-unlocking</div>
+        <div class="trouble-a">Your vault is not linked to your Windows account. Log in with your master password → click <strong>⚙ Link Windows Acct</strong> in the toolbar. Auto-unlock will work from next launch.</div>
+      </div>
+
+      <div class="trouble-item">
+        <div class="trouble-q">❌ Extension popup shows "SecureVault app not running"</div>
+        <div class="trouble-a">The desktop app must be open (system tray counts). Launch SecureVault from the Start Menu or desktop shortcut, then try again.</div>
+      </div>
+
+      <div class="trouble-item">
+        <div class="trouble-q">❌ 🔐 button doesn't appear on a login page</div>
+        <div class="trouble-a">The page may not have a standard <code>input[type="password"]</code> field. Try the toolbar popup icon instead — it works on all pages including those with non-standard login forms.</div>
+      </div>
+
+      <div class="trouble-item">
+        <div class="trouble-q">❌ Save banner doesn't appear after logging in</div>
+        <div class="trouble-a">Your vault must be linked to your Windows account for the extension to authenticate silently. Click <strong>⚙ Link Windows Acct</strong> in the app toolbar. Also ensure Site Access is set to "On all sites" in the extension settings.</div>
+      </div>
+
+      <div class="trouble-item">
+        <div class="trouble-q">❌ Ctrl+Shift+F does nothing</div>
+        <div class="trouble-a">The keyboard module requires the app to run as Administrator when the target window is elevated. Right-click the desktop shortcut → Run as Administrator. For permanent fix, the installer shortcut includes the elevated flag.</div>
+      </div>
+
+      <div class="trouble-item">
+        <div class="trouble-q">❌ Firefox extension not appearing after install</div>
+        <div class="trouble-a">Restart Firefox completely (File → Exit, not just close). The enterprise policy installs the extension on the next Firefox launch. Check <code>about:addons</code> to confirm it's listed.</div>
+      </div>
+
+      <div class="trouble-item">
+        <div class="trouble-q">❌ Antivirus deletes chrome_importer.py or the installer</div>
+        <div class="trouble-a">SecureVault reads browser credential files for import — behaviour that AV heuristics may flag. Add <code>C:\Program Files\SecureVault\</code> as an exclusion in your antivirus settings. A false-positive report has been filed with Kaspersky Lab.</div>
+      </div>
+
+      <div class="trouble-item">
+        <div class="trouble-q">❌ DPAPI decryption failed after Windows password reset</div>
+        <div class="trouble-a">DPAPI blobs are invalidated when the Windows account password is reset by an administrator. Use your master password to unlock → re-link via ⚙ Link Windows Acct to restore auto-unlock.</div>
+      </div>
+
+      <div class="trouble-item">
+        <div class="trouble-q">❌ Chrome import fails or returns no passwords</div>
+        <div class="trouble-a">Close Chrome completely before importing — Chrome holds an exclusive lock on the Login Data file while running. Then retry the import.</div>
+      </div>
+    </section>
+
+    <!-- RELEASES -->
+    <section id="releases">
+      <div class="section-title">
+        <span class="t-icon">📦</span> Releases
+      </div>
+
+      <div class="release">
+        <div class="release-head">
+          <span class="release-ver">v1.0.2</span>
+          <span class="release-tag tag-latest">Latest</span>
+          <span class="release-date">July 2026</span>
+        </div>
+        <ul>
+          <li>Multi-page login support (Gmail, Microsoft, Yahoo)</li>
+          <li>Manual credential capture button in extension popup</li>
+          <li>Fixed Save/Update banner on redirect-based logins</li>
+          <li>Debug logging removed from production build</li>
+          <li>Chrome Web Store published — permanent extension ID</li>
+        </ul>
+        <a href="https://github.com/HossainAbedy/securevault/releases/tag/v1.0.2" class="dl-btn">
+          ⬇ Download v1.0.2
+        </a>
+      </div>
+
+      <div class="release">
+        <div class="release-head">
+          <span class="release-ver">v1.0.1</span>
+          <span class="release-tag tag-stable">Stable</span>
+          <span class="release-date">July 2026</span>
+        </div>
+        <ul>
+          <li>Fixed Save/Update banner using sessionStorage (was chrome.storage.session)</li>
+          <li>Fixed extension context invalidated error on page navigation</li>
+          <li>Password redaction in native host log</li>
+          <li>App icon applied to desktop shortcut and taskbar</li>
+        </ul>
+        <a href="https://github.com/HossainAbedy/securevault/releases/tag/v1.0.1" class="dl-btn">
+          ⬇ Download v1.0.1
+        </a>
+      </div>
+
+      <div class="release">
+        <div class="release-head">
+          <span class="release-ver">v1.0.0</span>
+          <span class="release-tag tag-stable">Stable</span>
+          <span class="release-date">July 2026</span>
+        </div>
+        <ul>
+          <li>Initial release</li>
+          <li>AES-256-GCM vault with Argon2id key derivation</li>
+          <li>Windows DPAPI auto-unlock</li>
+          <li>Chrome, Edge, Firefox browser extension</li>
+          <li>Desktop autofill via Ctrl+Shift+F</li>
+          <li>Browser password import (Chrome, Edge, Firefox, CSV)</li>
+          <li>Windows installer (PyInstaller + Inno Setup)</li>
+        </ul>
+        <a href="https://github.com/HossainAbedy/securevault/releases/tag/v1.0.0" class="dl-btn">
+          ⬇ Download v1.0.0
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title">
+        <span class="t-icon">✉️</span> Contact & Support
+      </div>
+
+      <div class="callout blue">
+        <span class="c-icon">ℹ</span>
+        <p>SecureVault is a personal project maintained by one developer. Response time is typically 1–3 business days.</p>
+      </div>
+
+      <div class="card" style="display:flex;gap:20px;flex-wrap:wrap;align-items:center">
+        <div>
+          <h3 style="margin-bottom:6px">Get in touch</h3>
+          <p>Bug reports, feature requests, or general questions:</p>
+        </div>
+        <a href="mailto:abedy.ewu@gmail.com"
+           style="display:inline-flex;align-items:center;gap:8px;background:var(--blue);
+                  color:#1e1e2e;text-decoration:none;font-weight:700;font-size:13px;
+                  padding:10px 20px;border-radius:8px;white-space:nowrap;
+                  transition:background .15s"
+           onmouseover="this.style.background='#b4befe'"
+           onmouseout="this.style.background='#89b4fa'">
+          ✉ abedy.ewu@gmail.com
+        </a>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px">
+        <a href="https://hossainabedy.com" style="text-decoration:none">
+          <div class="card" style="margin-bottom:0;cursor:pointer">
+            <h3>🌐 Portfolio</h3>
+            <p>hossainabedy.com</p>
+          </div>
+        </a>
+        <a href="https://github.com/YOUR_USERNAME/securevault" style="text-decoration:none">
+          <div class="card" style="margin-bottom:0;cursor:pointer">
+            <h3>💻 GitHub</h3>
+            <p>Source code & issues</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </div>
 </div>
 
-<div class="ok">
-No Developer Mode is required.
-</div>
-
-<hr>
-
-<h2>Microsoft Edge</h2>
-
-<div class="step">
-<span class="num">1</span>
-
-Open
-
-<br><br>
-
-<code>edge://extensions</code>
-
-</div>
-
-<div class="step">
-<span class="num">2</span>
-
-Enable <b>Developer Mode</b>
-
-</div>
-
-<div class="step">
-<span class="num">3</span>
-
-Click <b>Load unpacked</b>
-
-</div>
-
-<div class="step">
-<span class="num">4</span>
-
-Browse to
-
-<br><br>
-
-<code>C:\Program Files\SecureVault\browser_extension</code>
-
-</div>
-
-<hr>
-
-<h2>Mozilla Firefox</h2>
-
-<div class="ok">
-
-The SecureVault Firefox extension is digitally signed by Mozilla.
-
-No manual installation is normally required.
-
-</div>
-
-<div class="step">
-<span class="num">1</span>
-
-Restart Firefox after installing SecureVault.
-
-</div>
-
-<div class="step">
-<span class="num">2</span>
-
-Open
-
-<br><br>
-
-<code>about:addons</code>
-
-</div>
-
-<div class="step">
-<span class="num">3</span>
-
-Verify that
-
-<b>SecureVault</b>
-
-appears in the Extensions list.
-
-</div>
-
-<div class="ok">
-
-If Firefox was already running during installation,
-a restart is usually all that is required.
-
-</div>
-
-<hr>
-
-<h2>Test SecureVault</h2>
-
-<div class="step">
-<span class="num">1</span>
-
-Launch SecureVault and unlock your vault.
-
-</div>
-
-<div class="step">
-<span class="num">2</span>
-
-Visit
-
-<code>https://github.com/login</code>
-
-</div>
-
-<div class="step">
-<span class="num">3</span>
-
-The floating SecureVault button should appear beside the login form.
-
-</div>
-
-<div class="step">
-<span class="num">4</span>
-
-Click the button to autofill your saved credentials.
-
-</div>
-
-<div class="step">
-<span class="num">5</span>
-
-Submitting a new login automatically offers to Save or Update credentials.
-
-</div>
-
-<hr>
-
-<h2>Features</h2>
-
-<table>
-
-<tr>
-<th>Feature</th>
-<th>Description</th>
-</tr>
-
-<tr>
-<td>Offline Storage</td>
-<td>Passwords remain on your PC only.</td>
-</tr>
-
-<tr>
-<td>AES-256-GCM Encryption</td>
-<td>Each credential is encrypted individually.</td>
-</tr>
-
-<tr>
-<td>Windows DPAPI</td>
-<td>Passwordless unlock tied to your Windows account.</td>
-</tr>
-
-<tr>
-<td>Password Generator</td>
-<td>Create strong passwords instantly.</td>
-</tr>
-
-<tr>
-<td>Desktop Autofill</td>
-<td>Ctrl + Shift + F anywhere in Windows.</td>
-</tr>
-
-<tr>
-<td>Browser Autofill</td>
-<td>Chrome, Edge and Firefox support.</td>
-</tr>
-
-<tr>
-<td>Import Passwords</td>
-<td>Import from Chrome, Edge, Firefox and CSV.</td>
-</tr>
-
-</table>
-
-<hr>
-
-<h2>Troubleshooting</h2>
-
-<table>
-
-<tr>
-<th>Problem</th>
-<th>Solution</th>
-</tr>
-
-<tr>
-<td>Extension cannot connect</td>
-<td>Ensure SecureVault is running.</td>
-</tr>
-
-<tr>
-<td>No autofill button</td>
-<td>The webpage may not contain a password field.</td>
-</tr>
-
-<tr>
-<td>No Save prompt</td>
-<td>Link your vault to your Windows account.</td>
-</tr>
-
-<tr>
-<td>Firefox extension missing</td>
-<td>Restart Firefox or reinstall SecureVault.</td>
-</tr>
-
-<tr>
-<td>Edge extension missing</td>
-<td>Load the unpacked extension manually.</td>
-</tr>
-
-</table>
-
-<div class="warn">
-
-<b>Security Notice</b><br><br>
-
-SecureVault never uploads your passwords or personal data.
-
-All encryption is performed locally on your computer.
-
-</div>
-
-<hr style="margin-top:50px;border-color:#313244;">
-
-<div style="text-align:center;line-height:1.8;">
-
-<b>SecureVault v1.0</b><br>
-
-Created by <b>Hossain Abedy</b><br>
-
-<a href="https://github.com/HossainAbedy/securevault/releases/tag/v1.0.0"
-style="color:#89b4fa;">
-Download Latest Release
-</a>
-
-<br>
-
-<a href="https://chromewebstore.google.com/detail/becngobgachhbpglojolpgioljnfddik"
-style="color:#89b4fa;">
-Chrome Web Store
-</a>
-
-<br>
-
-<a href="https://www.hossainabedy.com/policies/securevault/privacy-policy.html"
-style="color:#89b4fa;">
-Privacy Policy
-</a>
-
-</div>
+<footer>
+  <p>© 2026 Hossain Abedy Supta &nbsp;·&nbsp; <a href="https://hossainabedy.com">hossainabedy.com</a></p>
+  <div class="footer-links">
+    <a href="./privacy-policy.html">Privacy Policy</a>
+    <a href="https://chromewebstore.google.com/detail/becngobgachhbpglojolpgioljnfddik">Chrome Extension</a>
+    <a href="https://hossainabedy.com">Portfolio</a>
+  </div>
+</footer>
 
 </body>
 </html>
-

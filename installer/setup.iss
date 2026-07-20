@@ -3,9 +3,9 @@
 ; Produces: installer\output\SecureVaultSetup.exe
 
 #define AppName      "SecureVault"
-#define AppVersion   "1.0.1"
+#define AppVersion   "1.0.2"
 #define AppPublisher "Hossain Abedy"
-#define AppURL       "https://hossainabedy.com"
+#define AppURL       "https://www.hossainabedy.com/policies/securevault/support-policy.html"
 #define HostName     "com.securevault.nativehost"
 #define FFExtID      "securevault@abedy"
 
